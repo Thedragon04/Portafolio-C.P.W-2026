@@ -20,6 +20,8 @@ h1  {
     font-size: 32px;
     text-align: center;
     background-color: #fbf8f8;
+    font-family: "Aubrey",Arial, Helvetica, sans-serif ;
+    line-height: 1.6
 }
 
 h2{
@@ -76,7 +78,10 @@ tbody tr:nth-child(even){
     background-color: #f2d9a0;
 }
 
-
+body{
+    font-family: "Faculty Glyphic" Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
 
 
 
