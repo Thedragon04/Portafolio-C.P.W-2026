@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }/*esta regla elimina los margenes y el relleno predeterminado de todos los elementos y establece el modelo de caja para incluir el relleno y el borde en el ancho y el alto del elemento*/
 
+::selection{
+    color: #fdfcfb;
+    background-color: #ff2e13;
+}
+
 body {
     font-family:Arial, Helvetica, sans-serif;
     color:#bd4545;
@@ -70,6 +75,9 @@ nav a:hover{
 tbody tr:nth-child(even){
     background-color: #f2d9a0;
 }
+
+
+
 
 
 /*
