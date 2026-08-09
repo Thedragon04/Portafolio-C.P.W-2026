@@ -39,6 +39,34 @@ h4{
 table{
     margin: 0 auto;
 }
+p{
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.lo-mas-relevante{
+    background-color: #f0f680;
+}
+
+#inicio{
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+#final{
+    background-color: antiquewhite;
+}
+nav a {
+    color: #1F4E79;
+    margin: 0px 10px 0px 10px;
+    transition: 0.3ms;
+}
+
+nav a:hover{
+    color: #f88474;
+}
+
 
 /*
 table{
