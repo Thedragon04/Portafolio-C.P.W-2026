@@ -17,3 +17,47 @@ h1  {
     background-color: #fbf8f8;
 }
 
+.destacado{
+    background-color: #fff3cd;
+    padding: 10px;
+}
+
+
+/*Trabajando con id*/
+
+#inicio {
+    background-color: #1F4E79;
+    padding: 20px;
+}
+
+/*estilos a solo enlaces dentro del nav*/
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+    transition: color 0.3s;/*Cambio suave*/
+}
+/*pseudo clase :hover*/
+nav a:hover {
+    color: #f8cbad; /* al pasar el cursor*/
+}
+/* pseudo clasen _nth-child: filas cebra en la tabla*/
+tbody tr:nth-child(even){
+    background-color: #9ac498;
+}
+/*pseudo elemento ::first-letter y ::selection*/
+article p::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: #c55a11;
+
+}
+::selection {
+    background-color:#1F4E79;
+    color:white;
+}
+/*Agregar familia de fuentes de google fonts*/
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+} 
