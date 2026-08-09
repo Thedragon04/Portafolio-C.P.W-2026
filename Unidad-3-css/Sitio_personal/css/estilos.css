@@ -67,6 +67,10 @@ nav a:hover{
     color: #f88474;
 }
 
+tbody tr:nth-child(even){
+    background-color: #f2d9a0;
+}
+
 
 /*
 table{
