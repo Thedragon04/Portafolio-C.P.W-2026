@@ -79,7 +79,7 @@ tbody tr:nth-child(even){
 }
 
 body{
-    font-family: "Faculty Glyphic" Arial, Helvetica, sans-serif;
+    font-family: "Faculty Glyphic", Arial, Helvetica, sans-serif;
     line-height: 1.2;
 }
 
