@@ -60,6 +60,12 @@ footer{
     margin-top: 32px;
 }
 
+.portada-texto{
+    background-color:rgba(221, 38, 38, 35);
+    padding: 24px;
+    border-radius: 20px;
+}
+
 main p{
     max-width: 70ch;
     /*ch es el ancho del caracter cero de la fuente en uso. el valor 70 marca el rango de lectura comoda por linea o reglon. mas larga, la vista se pierde al cambio de linea*/
