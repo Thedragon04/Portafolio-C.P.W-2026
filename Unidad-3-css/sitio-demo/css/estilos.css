@@ -1,11 +1,20 @@
 /*css/estilos.css*/
 /* Reset basico a todo*/
+/*100% del tamaño que el usuario configuro. Por imision son 16px, */
+html{
+    font-size: 100%;
+}
+
 * {margin: 0;
     padding: 0;
     box-sizing: border-box;
 }/*esta regla elimina los margenes y el relleno predeterminado de todos los elementos y establece el modelo de caja para incluir el relleno y el borde en el ancho y el alto del elemento*/
 
+
+
 body {
+    font-size: 1rem;
+    line-height: 1.6;
     font-family:Arial, Helvetica, sans-serif;
     color:#bd4545;
 }/*esta regla define la fuente y el color de texto del documento*/
