@@ -16,8 +16,8 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     font-family:Arial, Helvetica, sans-serif;
-    color:#bd4545;
-    background-color: #fbf8f8;
+    color:#333;
+    background-color: #fcfcfc;
 }/*esta regla define la fuente y el color de texto del documento*/
 
 h1  {
@@ -44,6 +44,20 @@ h3{
 p{
     font-size: 1rem;
     font-weight: 400;
+}
+
+h2, h3{
+    color: #1F4E79;
+}
+
+header{
+    background-color: #1F4E79;
+    color: white;
+}
+footer{
+    background-color: #dce6f1;
+    padding: 20px;
+    margin-top: 32px;
 }
 
 main p{
