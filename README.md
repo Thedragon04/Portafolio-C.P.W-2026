@@ -107,7 +107,7 @@ Proyecto propio construido de forma autónoma.
 | :----: | :------------------------- | :---------- | :-----------------: | :--------------: |
 |  S11   | Introducción a CSS         |Aprendimos a utlizar estilos de css y como linkearlos a las paginas | [ver](Unidad-3-css/Sitio_personal/css/estilos.css) | [ver](recursos/S11.png) |
 |  S12   | Selectores y pseudo-clases |Aprendimos de pseudo clases y elementos y como editar por separado secciones que nosotros considermos necesarias para la pagina tambien aprendimos a como poner tipografias y color | [ver](Unidad-3-css/Sitio_personal/css/estilos.css) | [ver](recursos/S12.png) |
-|  S13   | Tipografía y color         |             | [ver](Unidad-3-css) | [ver](recursos/) |
+|  S13   | Tipografía y color         |Aprendimos a como estlizar la tipografia, fondos y como quitar decoraciones de los textos | [ver](Unidad-3-css/Sitio_personal/css/estilos.css) | [ver](recursos/S13.png) |
 |  S14   | Modelo de cajas            |             | [ver](Unidad-3-css) | [ver](recursos/) |
 |  S15   | Display y posicionamiento  |             | [ver](Unidad-3-css) | [ver](recursos/) |
 |  S16   | Flexbox                    |             | [ver](Unidad-3-css) | [ver](recursos/) |
