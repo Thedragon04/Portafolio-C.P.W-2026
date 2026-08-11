@@ -54,11 +54,12 @@ header{
 
 }
 
-main{
-    max-width: 1000px;
+.contenedor{
+    max-width: 1200px;
     margin: 0 auto;
     /*0 aplica a la parte vertical y horizontal el auto: reparte el espacio sobrante por igaul a ambos lados lo centra en un elemnento con ancho limitado*/
 }
+
 
 footer{
     background-color: #dce6f1;
@@ -92,6 +93,8 @@ header nav a{
     letter-spacing: 1px;
     font-size: 0.9rem;
     text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
 }
 header nav ul{
     list-style-type: none;
@@ -165,6 +168,20 @@ padding-left 10px aplica izquierda*/
 
 th, td{
     padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+thead th{
+    background-color: #1F4E79;
+    color: white;
+    /*Trabaja encabezados de la tabla*/
+}
+
+tfoot td{
+    padding: 12px;
+    font-style: italic;
+    background-color: #f5f7fa;
 }
 
 fieldset{
@@ -174,3 +191,40 @@ fieldset{
 section{
     margin-bottom: 32px;
 }
+
+/*Listas de horario.html*/
+main ul, main ol{
+    padding-left: 24px;
+    margin-bottom: 16px;
+}
+
+main li {
+    margin-bottom: 6px;
+}
+
+/*Lista descriptiva*/
+#glosario dt{
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+#glosario dd{
+    margin-left: 20px;
+    margin-top: 8px;
+}
+/*La sangria de dd es lo que hace visible l arelacion entre el termino y su descripcion*/
+
+/*La tabla de calendario*/
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+caption{
+    padding: 8px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
