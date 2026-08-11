@@ -93,12 +93,26 @@ header nav a{
     letter-spacing: 1px;
     font-size: 0.9rem;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block;/*Pone en linea elementos*/
     padding: 10px 15px;
 }
 header nav ul{
     list-style-type: none;
 }
+
+nav li{
+    margin-right: 15px;
+    /*visibility: hidden; Oculta pero se puede interactuar con el*/
+}
+
+/*main nav{
+    display: none;
+} Esta propiedad desaparece el elemento*/
+
+header nav li{
+    display: inline-block;
+}
+/*Colocca las opciones de menu en linea, uno al lado de otro*/
 
 
 .destacado{
@@ -228,3 +242,14 @@ caption{
     margin-bottom: 24px;
 }
 
+/*Los cinco valores de position
+static: valor por omision
+relative: se desplaza de su propia posicion, conserva su propia posicion y los elementos vecinos no se mueven
+absolute: se ubica respecto al ancestro mas cercano
+fixed: se ubica con respecto a la ventana, no se mueve al desplazarce
+sticky: fluye normal hasta llegar a umbral, y entonces se pega*/
+
+/*Patron para este caso*/
+.figura-destacada{
+    
+}
