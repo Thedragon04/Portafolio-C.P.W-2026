@@ -18,6 +18,7 @@ body {
     font-family:Arial, Helvetica, sans-serif;
     color:#333;
     background-color: #fcfcfc;
+    padding-top: 180px;
 }/*esta regla define la fuente y el color de texto del documento*/
 
 h1  {
@@ -57,6 +58,7 @@ header{
 .contenedor{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 25px;
     /*0 aplica a la parte vertical y horizontal el auto: reparte el espacio sobrante por igaul a ambos lados lo centra en un elemnento con ancho limitado*/
 }
 
@@ -86,6 +88,7 @@ main a{
 blockquote p{
     font-style: italic;
     color: #555;
+    border-left: 4px solid #1f4e79;
 }
 
 header nav a{
@@ -124,12 +127,23 @@ header nav li{
 /*Trabajando con id*/
 
 #inicio {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;/*fija con respecto a la ventana, cabecera queda arriba*/
     background-image: url(../Recursos/Fondo1.webp);
     padding: 30px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 100;/*Cuanto mas mayor es el numero mas al frente va a estar*/
 }
+
+/*#inicio{
+    position: sticky;
+    top: 0px;
+    Fluye normal y se pega al llegar arriba o limite del contenedor
+}*/
 
 /*estilos a solo enlaces dentro del nav*/
 
@@ -192,6 +206,12 @@ thead th{
     /*Trabaja encabezados de la tabla*/
 }
 
+figure{
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 12px;
+}
+
 tfoot td{
     padding: 12px;
     font-style: italic;
@@ -251,5 +271,22 @@ sticky: fluye normal hasta llegar a umbral, y entonces se pega*/
 
 /*Patron para este caso*/
 .figura-destacada{
-    
+    position: relative;/*posiona como padre y este no se va a mover. es referencia de hijo absoluto*/
 }
+
+.etiqueta{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #c55a11;
+    color: white;
+    border-radius: 40px;
+    font-size: 0.875rem;
+    z-index: 10;
+}
+/*z-index SOLO FUNCIONA en elemento con un position declarado si el es static no funciona.
+escala de valores de z-index
+10 para elementos pocionados dentro del contenido
+100 la cabecera fija
+1000 ventanas emergentes y capas superpuestas
+9999 no hace falta usarlo nunca porque no deja margen a otro valor por encima*/
