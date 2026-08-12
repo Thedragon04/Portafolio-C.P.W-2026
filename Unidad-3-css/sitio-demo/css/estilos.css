@@ -136,6 +136,7 @@ header nav li{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 100;/*Cuanto mas mayor es el numero mas al frente va a estar*/
 }
 
 /*#inicio{
@@ -281,4 +282,11 @@ sticky: fluye normal hasta llegar a umbral, y entonces se pega*/
     color: white;
     border-radius: 40px;
     font-size: 0.875rem;
+    z-index: 10;
 }
+/*z-index SOLO FUNCIONA en elemento con un position declarado si el es static no funciona.
+escala de valores de z-index
+10 para elementos pocionados dentro del contenido
+100 la cabecera fija
+1000 ventanas emergentes y capas superpuestas
+9999 no hace falta usarlo nunca porque no deja margen a otro valor por encima*/
