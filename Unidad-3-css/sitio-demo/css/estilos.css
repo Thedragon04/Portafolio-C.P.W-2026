@@ -57,6 +57,7 @@ header{
 .contenedor{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 25px;
     /*0 aplica a la parte vertical y horizontal el auto: reparte el espacio sobrante por igaul a ambos lados lo centra en un elemnento con ancho limitado*/
 }
 
@@ -86,6 +87,7 @@ main a{
 blockquote p{
     font-style: italic;
     color: #555;
+    border-left: 4px solid #1f4e79;
 }
 
 header nav a{
@@ -192,6 +194,12 @@ thead th{
     /*Trabaja encabezados de la tabla*/
 }
 
+figure{
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 12px;
+}
+
 tfoot td{
     padding: 12px;
     font-style: italic;
@@ -251,5 +259,5 @@ sticky: fluye normal hasta llegar a umbral, y entonces se pega*/
 
 /*Patron para este caso*/
 .figura-destacada{
-    
+    position: relative;/*posiona como padre y este no se va a mover. es referencia de hijo absoluto*/
 }
