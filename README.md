@@ -109,7 +109,7 @@ Proyecto propio construido de forma autónoma.
 |  S12   | Selectores y pseudo-clases |Aprendimos de pseudo clases y elementos y como editar por separado secciones que nosotros considermos necesarias para la pagina tambien aprendimos a como poner tipografias y color | [ver](Unidad-3-css/Sitio_personal/css/estilos.css) | [ver](recursos/S12.png) |
 |  S13   | Tipografía y color         |Aprendimos a como estlizar la tipografia, fondos y como quitar decoraciones de los textos | [ver](Unidad-3-css/Sitio_personal/css/estilos.css) | [ver](recursos/S13.png) |
 |  S14   | Modelo de cajas            |Aprendimos de como son las cajas y los elementos que las forman tambien vimos sus propiedades| [ver](Unidad-3-css/sitio-demo/css/estilos.css) | [ver](recursos/S14.png) |
-|  S15   | Display y posicionamiento  |             | [ver](Unidad-3-css) | [ver](recursos/) |
+|  S15   | Display y posicionamiento  |Aprendimos a como mover elementos en una caja y el como se pueden mover cajas de diferentes maneras| [ver](Unidad-3-css/sitio-demo/css/estilos.css) | [ver](recursos/S15.png) |
 |  S16   | Flexbox                    |             | [ver](Unidad-3-css) | [ver](recursos/) |
 |  S17   | CSS Grid                   |             | [ver](Unidad-3-css) | [ver](recursos/) |
 |  S18   | Componentes estilizados    |             | [ver](Unidad-3-css) | [ver](recursos/) |
