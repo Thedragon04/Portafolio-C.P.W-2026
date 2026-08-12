@@ -13,15 +13,18 @@ html{
     background-color: #ff2e13;
 }
 
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
 body{
     font-family: "Faculty Glyphic", Arial, Helvetica, sans-serif;
     line-height: 1.2;
-}
-
-body {
-    font-family:Arial, Helvetica, sans-serif;
     color:#bd4545;
     text-align: center;
+    padding-top: 220px;
 }/*esta regla define la fuente y el color de texto del documento*/
 h1  {
     color: #ffffff;
@@ -35,22 +38,31 @@ header nav a{
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-style: 0.9rem;
+    font-size: 0.9rem;
+    padding: 15px 20px;
 }
 header nav ul{
-    list-style-type: none;/*Para quitar los puntos del otro lado*/
+    list-style: none;/*Para quitar los puntos del otro lado*/
+}
+
+header nav li{
+    display: inline-block;
 }
 
 .menu-de-anclas-internas a{
     text-decoration: none;
     letter-spacing: 1px;
-    font-style: 0.9rem;
+    font-size: 0.9rem;
     color: #7501fa;
 }
+.menu-de-anclas-internas li{
+        list-style: none;
+}
+
 p a{
     text-decoration: none;
     letter-spacing: 1px;
-    font-style: 0.9rem;
+    font-size: 0.9rem;
     color: #7501fa;
 }
 
@@ -109,11 +121,15 @@ p{
 
 #inicio{
     background-color: antiquewhite;
-    background-image: url(../recursos/Fondo1.jpg);
+    background-image: url(../recursos/fondo1.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 26rem;
+    height: 16rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 
@@ -122,6 +138,8 @@ nav a {
     margin: 0px 10px 0px 10px;
     transition: 0.3ms;
 }
+
+
 
 nav a:hover{
     color: #f88474;
@@ -141,44 +159,3 @@ footer{
     padding: 20px;
     margin-top: 32px;
 }
-
-
-
-
-/*
-table{
-    align-items: center;
-}*/
-
-
-
-
-
-
-/*
-nav>ul>li{
-    padding: 3px;
-}
-
-p {
-    padding: 15px;
-}
-
-#Lista{
-    margin-bottom: 5px;
-}
-#Lista2{
-    margin-bottom: 5px;
-}
-
-.Demonios>ul {
-    padding: 20px;
-}
-
-.Demonios>ul>li {
-    padding: 2px;
-}
-.Demonios>ol>li {
-    padding: 2px;
-    margin: 0px 20px 0px 20px;
-}*/
