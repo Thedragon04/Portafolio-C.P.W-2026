@@ -49,6 +49,7 @@ header nav li{
     display: inline-block;
 }
 
+/*menus*/
 .menu-de-anclas-internas a{
     text-decoration: none;
     letter-spacing: 1px;
@@ -58,6 +59,22 @@ header nav li{
 .menu-de-anclas-internas li{
     list-style: none;
 }
+#inicio{
+    background-color: antiquewhite;
+    background-image: url(../recursos/fondo1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 12rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/*menus*/
+
+
+
 
 p a{
     text-decoration: none;
@@ -104,6 +121,7 @@ blockquote p{
     color: #555;
 }
 
+/*tabla*/
 table{
     margin: 10px auto;
     border-collapse: collapse;
@@ -132,10 +150,7 @@ thead th{
 tbody tr:nth-child(even){
     background-color: #f2d9a0;
 }
-
-
-
-
+/*tabla*/
 
 p{
     text-align: center;
@@ -145,19 +160,6 @@ p{
 
 .lo-mas-relevante{
     background-color: #f0f680;
-}
-
-#inicio{
-    background-color: antiquewhite;
-    background-image: url(../recursos/fondo1.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 12rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
 }
 
 
@@ -185,6 +187,8 @@ footer{
     margin-top: 32px;
 }
 
+
+/*listas*/
 .demonios{
     margin: 6px;
 }
@@ -215,3 +219,4 @@ footer{
     margin-top: 12px;
     color: #5c95ff;
 }
+/*listas*/
