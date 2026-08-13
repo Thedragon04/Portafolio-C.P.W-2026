@@ -96,17 +96,20 @@ header nav a{
     letter-spacing: 1px;
     font-size: 0.9rem;
     text-decoration: none;
-    display: inline-block;/*Pone en linea elementos*/
+    /*display: inline-block;/*Pone en linea elementos*/
     padding: 10px 15px;
 }
 header nav ul{
+    display: flex;
     list-style-type: none;
+    flex-direction: row;/*Dirrecion a la que flex ve row fila, column en columna y esta predeterminado el row*/
 }
 
-nav li{
+/*header nav li{
     margin-right: 15px;
-    /*visibility: hidden; Oculta pero se puede interactuar con el*/
 }
+    /*visibility: hidden; Oculta pero se puede interactuar con el*/
+
 
 /*main nav{
     display: none;
