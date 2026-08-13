@@ -110,7 +110,7 @@ Proyecto propio construido de forma autónoma.
 |  S13   | Tipografía y color         |Aprendimos a como estlizar la tipografia, fondos y como quitar decoraciones de los textos | [ver](Unidad-3-css/sitio-demo/Sitios-demo/articulo.html) | [ver](recursos/S13.png) |
 |  S14   | Modelo de cajas            |Aprendimos de como son las cajas y los elementos que las forman tambien vimos sus propiedades| [ver](Unidad-3-css/sitio-demo/Sitios-demo/index.html) | [ver](recursos/S14.png) |
 |  S15   | Display y posicionamiento  |Aprendimos a como mover elementos en una caja y el como se pueden mover cajas de diferentes maneras| [ver](Unidad-3-css/sitio-demo/Sitios-demo/index.html) | [ver](recursos/S15.png) |
-|  S16   | Flexbox                    |Apredimos a como utilizar el flex como mover los elementos alinearlos cmabiarlos de linea | [ver](Unidad-3-css/sitio-demo/Sitios-demo/galeria.html) | [ver](recursos/) |
+|  S16   | Flexbox                    |Apredimos a como utilizar el flex como mover los elementos alinearlos cmabiarlos de linea | [ver](Unidad-3-css/sitio-demo/Sitios-demo/galeria.html) | [ver](recursos/S16.png) |
 |  S17   | CSS Grid                   |             | [ver](Unidad-3-css) | [ver](recursos/) |
 |  S18   | Componentes estilizados    |             | [ver](Unidad-3-css) | [ver](recursos/) |
 |  S19   | Animaciones y filtros      |             | [ver](Unidad-3-css) | [ver](recursos/) |
