@@ -314,3 +314,21 @@ escala de valores de z-index
     justify-content: center;/*Horizontal*/
     align-items: center;/*Vertical*/
 }
+
+.fila-tarjetas{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex-grow: 1;/*Cuando crece si sobra espacio se lo da .0 no crece*/
+    flex-shrink: 1;/*Cuanto encojo si sobra espacio de la da*/
+    flex-basis: 0;/*Como estaba al principio*/
+}
+
+.tarjeta {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
