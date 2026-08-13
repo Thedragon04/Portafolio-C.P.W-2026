@@ -24,7 +24,7 @@ body{
     line-height: 1.2;
     color:#bd4545;
     text-align: center;
-    padding-top: 220px;
+    padding-top: 200px;
 }/*esta regla define la fuente y el color de texto del documento*/
 h1  {
     color: #ffffff;
@@ -56,7 +56,7 @@ header nav li{
     color: #7501fa;
 }
 .menu-de-anclas-internas li{
-        list-style: none;
+    list-style: none;
 }
 
 p a{
@@ -76,8 +76,6 @@ h2{
     font-size: 2rem;
     font-weight: 700;
 }
-
-
 h3{
     padding: 10px;
     text-align: center;
@@ -107,8 +105,38 @@ blockquote p{
 }
 
 table{
-    margin: 0 auto;
+    margin: 10px auto;
+    border-collapse: collapse;
+    width: 100%;
 }
+table caption{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+tbody td{
+    padding: 10px;
+}
+tfoot td{
+    padding: 10px;
+    background-color: #e7e7e7;
+}
+th, td{
+    border: 1px solid #e7e7e7;
+}
+thead th{
+    background-color: #477dfc;
+    color: white ;
+    padding: 10px;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f2d9a0;
+}
+
+
+
+
+
 p{
     text-align: center;
     padding: 10px;
@@ -125,7 +153,7 @@ p{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 16rem;
+    height: 12rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -145,9 +173,6 @@ nav a:hover{
     color: #f88474;
 }
 
-tbody tr:nth-child(even){
-    background-color: #f2d9a0;
-}
 
 
 #final{
@@ -158,4 +183,35 @@ footer{
     background-color: antiquewhite;
     padding: 20px;
     margin-top: 32px;
+}
+
+.demonios{
+    margin: 6px;
+}
+
+.demonios li{
+    list-style: none;
+    padding: 8px;
+    color: #555;
+}
+
+.demonios p{
+    color: #555;
+}
+
+.demonios strong{
+    color: #5c95ff;
+}
+
+.demonios dd{
+    margin-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.demonios dt{
+    font-weight: 700;
+    margin-top: 12px;
+    color: #5c95ff;
 }
