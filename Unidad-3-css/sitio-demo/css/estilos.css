@@ -91,6 +91,8 @@ blockquote p{
     border-left: 4px solid #1f4e79;
 }
 
+
+
 header nav a{
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -98,14 +100,21 @@ header nav a{
     text-decoration: none;
     /*display: inline-block;/*Pone en linea elementos*/
     padding: 10px 15px;
+
 }
 header nav ul{
+    margin-top: 10px;
     display: flex;
     list-style-type: none;
     flex-direction: row;/*Dirrecion a la que flex ve row fila, column en columna y esta predeterminado el row*/
     gap: 50px;/*Separacion entre elementos */
     justify-content: center;/*Center, space-between: los elementos a los lados, space-around:Espacio alrededor de cada uno, space-evenly:Coloca todos los espacios iguales, flex-start, flex-end*/
 }
+
+head nav{
+    align-self: center;/*anula a align-items para el elemento especifico admite los mismos elementos que align*/
+}
+
 
 /*header nav li{
     margin-right: 15px;
@@ -132,9 +141,10 @@ header nav li{
 /*Trabajando con id*/
 
 #inicio {
+    
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;/*baseline alinea por la linea base del texto*/
     position: fixed;
     top: 0px;
     left: 0px;
@@ -298,3 +308,9 @@ escala de valores de z-index
 100 la cabecera fija
 1000 ventanas emergentes y capas superpuestas
 9999 no hace falta usarlo nunca porque no deja margen a otro valor por encima*/
+
+.centrado{
+    display: flex;
+    justify-content: center;/*Horizontal*/
+    align-items: center;/*Vertical*/
+}
