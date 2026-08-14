@@ -39,7 +39,7 @@
 <main>
     <article>
         <h2>Galería</h2>
-    <div class="tarjeta">
+    <div class="tarjeta galeria-grid">
         <!-- Imágenes y sus atributos -->
         <figure>
             <img src="../recursos/S.7_lab01.jpg" alt="Imagen de la galería de un laboratorio de informatica" width="400" height="300">
@@ -62,14 +62,27 @@
             <figcaption>laboratorio</figcaption>
         </figure>
 
+<!--Copio las imagenes de galeria-->
+        <figure>
+            <img src="../recursos/S.7_lab01.jpg" alt="Imagen de la galería de un laboratorio de informatica" width="400" height="300">
+            <figcaption>Imagen de laboratorio</figcaption>
+        </figure>
 
-        <!--Varios formatos: el navegador elige el primero que soporta-->
+        <!--FIGURE: agrupa un contenido con una explicaciom-->
+        <figure class="figura-destacada">            
+            <picture>
+                <source srcset="../recursos/S.7_lab01.webp" type="image/webp">
+                <source srcset="../recursos/S.7_lab01.jpg" type="image/jpeg">
+                <img src="../recursos/S.7_lab01.webp" alt="Imagen de la galería de un laboratorio de informatica" width="400" height="300">
+        </picture>
+        <span class="etiqueta">Destacada</span>
+        <figcaption>Imagen de la galería de un laboratorio de informatica</figcaption>
+        </figure>
 
-
-    
-
-
-
+        <figure>
+            <img src="../Recursos/S.7_lab02.jpg" alt="Siuuuu" width="400" height="300">
+            <figcaption>laboratorio</figcaption>
+        </figure>
     </div>
         <!--Audio-->
         <section id="audio">
