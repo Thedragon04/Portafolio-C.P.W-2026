@@ -219,4 +219,31 @@ footer{
     margin-top: 12px;
     color: #5c95ff;
 }
+
+.armas ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.grid-demonios{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+
+#demonios-jefe{
+    grid-column: 1/3;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+
+.demonios ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 /*listas*/
