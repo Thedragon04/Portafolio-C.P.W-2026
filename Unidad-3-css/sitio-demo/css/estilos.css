@@ -238,9 +238,11 @@ thead th{
 }
 
 figure{
+    background: white;
     border: 1px solid #dddddd;
     border-radius: 6px;
     padding: 12px;
+    box-shadow: 0 2px 8px rgba(248, 194, 194, 0.1);
 }
 
 tfoot td{
@@ -368,7 +370,7 @@ escala de valores de z-index
     /*grid-template-columns: 1fr 1fr 1fr ;*/
     /*grid-template-columns: repeat(3, 1fr);*/
     /*grid-template-columns: 1fr 2fr;*/
-    grid-template-columns: 2px 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
 }
 
@@ -524,4 +526,13 @@ mientras se pulsa*/
 }
 .boton-secundario:hover{
     background-color: #4b5563;
+}
+
+.tarjeta {
+    background: #806b6b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 3px rgba(0, 0, 0, 0.8);
+    /*0 es X, el 4px es Y 12px:blur o difuminado*/
 }
