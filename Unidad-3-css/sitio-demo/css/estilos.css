@@ -75,7 +75,7 @@ footer{
 }
 
 .portada-texto{
-    background-color:rgba(221, 38, 38, 35);
+    background-color:rgba(221, 38, 38, 0.5);
     padding: 24px;
     border-radius: 10px;
 }
@@ -399,10 +399,10 @@ escala de valores de z-index
     repetir el nombre hace que una zona abarque varias celdas
     aqui el indice acupa 2 filas de la primera columna*/
     /*Asignar cada elemento a su area */
-    #contenido > nav {grid-area: indice;}
+    /*#contenido > nav {grid-area: indice;}
     #contenido > nav {grid-area: principal;}
     #contenido > nav {grid-area: lateral;}
-    grid-template-areas: 'indice principal';
+    grid-template-areas: 'indice principal';*/
 
 }
 
