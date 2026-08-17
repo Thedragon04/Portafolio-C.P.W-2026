@@ -75,7 +75,7 @@ footer{
 }
 
 .portada-texto{
-    background-color:rgba(221, 38, 38, 35);
+    background-color:rgba(221, 38, 38, 0.5);
     padding: 24px;
     border-radius: 10px;
 }
@@ -180,9 +180,14 @@ nav a:hover {
     color: #f8cbad; /* al pasar el cursor*/
 }
 /* pseudo clasen _nth-child: filas cebra en la tabla*/
-tbody tr:nth-child(even){
+tbody tr :nth-child(even){
     background-color: #9ac498;
 }
+tbody tr:hover{
+    background-color: #e3eef9;
+}
+
+
 /*pseudo elemento ::first-letter y ::selection*/
 article p::first-letter {
     font-size: 32px;
@@ -226,23 +231,38 @@ th, td{
 thead th{
     background-color: #1F4E79;
     color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     /*Trabaja encabezados de la tabla*/
 }
 
 figure{
+    background: rgb(255, 255, 255);
     border: 1px solid #dddddd;
     border-radius: 6px;
     padding: 12px;
+    box-shadow: 0 2px 8px rgba(175, 0, 0, 0.1);
 }
 
 tfoot td{
     padding: 12px;
     font-style: italic;
     background-color: #f5f7fa;
+    border-top: 2px solid #1f4e79;
 }
 
 fieldset{
     padding: 16px;
+    margin-bottom: 20px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+}
+legend{
+    padding: 0 8px;
+    font-weight: 700;
+    color: #1f4e79;
+    border-radius: 8px;
 }
 
 section{
@@ -283,6 +303,8 @@ caption{
     padding: 8px;
     font-weight: 700;
     margin-bottom: 24px;
+    text-align: left;
+    color: #6b7280;
 }
 
 /*Los cinco valores de position
@@ -348,7 +370,7 @@ escala de valores de z-index
     /*grid-template-columns: 1fr 1fr 1fr ;*/
     /*grid-template-columns: repeat(3, 1fr);*/
     /*grid-template-columns: 1fr 2fr;*/
-    grid-template-columns: 2px 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
 }
 
@@ -379,10 +401,10 @@ escala de valores de z-index
     repetir el nombre hace que una zona abarque varias celdas
     aqui el indice acupa 2 filas de la primera columna*/
     /*Asignar cada elemento a su area */
-    #contenido > nav {grid-area: indice;}
+    /*#contenido > nav {grid-area: indice;}
     #contenido > nav {grid-area: principal;}
     #contenido > nav {grid-area: lateral;}
-    grid-template-areas: 'indice principal';
+    grid-template-areas: 'indice principal';*/
 
 }
 
@@ -404,4 +426,119 @@ escala de valores de z-index
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+}
+form label{/*Display block pone la etiqueta sobre el campo, funciona mejor en pantallas angostas*/
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"],
+form input[type="number"],
+form input[type="data"],
+form select,
+form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-family: inherit;/*Los campos del formulario NO heredan la fuente del body por la omision sin esta linea apareceria con la fuente del sistema*/
+}
+
+/*Casillas por separado*/
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    margin-bottom: 0;
+}
+
+form input[type="radio"] + label,
+form input[type="checkbox"] + label {
+    display: inline;
+    font-weight: 400;
+}/*El selector + alcanza la etiqueta y el display:inline los coloca uno al lado del otro*/
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline: none;
+    border-color: #1f4e79;
+    box-shadow: 0 0 5px 3px rgba(35, 78, 121, 0.15);
+    /*El halo azul alrededor del campo activo
+    El focus NO es solo decoracion es una guia para el usuario*/
+}
+
+/*Los estados de validacion*/
+form input:invalid:not(:placeholder-shown){
+    border-color: #c0392b;
+}
+form input:valid:not(:placeholder-shown){
+    border-color: #2e7d32;
+}
+/*apoya la validacion HTML en los required, type, pattern, minlength, etc, colocando un halo de color segun si el dato es correcto o no*/
+
+/*Para los mensajes ayuda*/
+form small{
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    color: #6b7280;
+}/*Los small que acompañan a los campos con los textos "minimo 8 caracteres, entre 1 y 8 sesiones, etc"*/
+
+.boton-secundario ,.boton{
+    background-color: #c55a11;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;/*Pone la manita*/
+}
+
+/*Los tres estados*/
+/*Hover 1*/
+.boton:hover{
+    background-color: #a8490e;
+}
+/*Active 2
+mientras se pulsa*/
+.boton:active{
+    background-color: #8a3b0b;
+}
+/*Focus 3*/
+.boton:focus{
+    outline: 2px solid #f5c518;
+    outline-offset: 2px;
+}
+
+/*variante secundaria*/
+.boton-secundario{
+    background-color: #6b7280;
+}
+.boton-secundario:hover{
+    background-color: #4b5563;
+}
+
+.tarjeta {
+    background: #b8b7b7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 3px rgba(174, 174, 174, 0.8);
+    /*0 es X, el 4px es Y 12px:blur o difuminado*/
+}
+
+.tarjeta figure:hover{
+    transform: translateY(-5px);/*Valor positivo va hacia arriba*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 1s ease;
 }
