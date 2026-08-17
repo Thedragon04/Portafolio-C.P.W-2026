@@ -432,7 +432,7 @@ form label{/*Display block pone la etiqueta sobre el campo, funciona mejor en pa
 }
 
 form input[type="text"],
-form input[type="gmail"],
+form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
 form input[type="number"],
@@ -462,3 +462,30 @@ form input[type="checkbox"] + label {
     font-weight: 400;
 }/*El selector + alcanza la etiqueta y el display:inline los coloca uno al lado del otro*/
 
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline: none;
+    border-color: #1f4e79;
+    box-shadow: 0 0 5px 3px rgba(35, 78, 121, 0.15);
+    /*El halo azul alrededor del campo activo
+    El focus NO es solo decoracion es una guia para el usuario*/
+}
+
+/*Los estados de validacion*/
+form input:invalid:not(:placeholder-shown){
+    border-color: #c0392b;
+}
+form input:valid:not(:placeholder-shown){
+    border-color: #2e7d32;
+}
+/*apoya la validacion HTML en los required, type, pattern, minlength, etc, colocando un halo de color segun si el dato es correcto o no*/
+
+/*Para los mensajes ayuda*/
+form small{
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    color: #6b7280;
+}/*Los small que acompañan a los campos con los textos "minimo 8 caracteres, entre 1 y 8 sesiones, etc"*/
