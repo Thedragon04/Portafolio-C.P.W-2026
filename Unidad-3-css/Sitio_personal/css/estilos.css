@@ -288,3 +288,22 @@ footer{
 }
 
 /*listas*/
+
+/*Formulario*/
+
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 16px auto;
+    border: 2px solid #222;
+    border-radius: 15px;
+    max-width: 40ch;
+    
+}
+
+.campo{
+    display: flex;
+    align-self: center;
+    padding: 8px;
+}

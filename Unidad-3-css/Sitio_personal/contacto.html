@@ -53,21 +53,28 @@
                     </p>
                     <button type="submit">Enviar</button>
 
-                    <br><br>    
 
                     <fieldset>
                         <legend>Fecha en la desea ser atendido</legend>
+
+                        <div class="campo">
                         <label for="fecha">Fecha de cita:</label>
                         <input type="date" id="fecha" name="fecha" required>
+                        </div>
 
+                        
                         <p>Horario de atención:</p>
+                        <div class="campo">
                         <label for="Dia-tarde">10:00 AM - 2:00 PM</label>
                         <input type="radio" id="Dia-tarde" name="hora" required>
+                        </div>
                         
-                        <br>
 
+                        <div class="campo">
                         <label for="Tarde">2:00 PM - 6:00 PM</label>
-                        <input type="radio" id="Tarde" name="hora" required> <br>
+                        <input type="radio" id="Tarde" name="hora" required>
+                        </div>
+                        
                         <button type="submit">Enviar</button>
 
 
@@ -78,30 +85,42 @@
                 <legend>Tema de interés</legend>
                 
 
+                <div class="campo">
                 <input type="checkbox" id="demonios" name="tema" value="demonios">
                 <label for="demonios">Demonios</label>
-                <br>
+                </div>
+                
 
+                <div class="campo">
                 <input type="checkbox" id="personajes" name="tema" value="personajes">
                 <label for="personajes">Personajes</label>
-                <br>
+                </div>
+                
 
+                <div class="campo">
                 <input type="checkbox" id="armas" name="tema" value="armas">
                 <label for="armas">Armas</label>
-                <br>
+                </div>
+                
 
+                <div class="campo">
                 <input type="checkbox" id="niveles" name="tema" value="niveles">
                 <label for="niveles">Niveles</label>
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Confirmar mensaje</legend>
                 <p>Al enviar este formulario, confirmo que la información proporcionada es correcta.</p>
+
+                <div class="campo">
                 <input type="checkbox" id="confirmar" name="confirmar" required>
                 <label for="confirmar">Confirmo la información</label>
+                </div>
+
             </fieldset>
         </form>
-        <br>
+        
         <button type="submit">Enviar</button>
         <button type="reset">Limpiar formulario</button>
 
