@@ -489,3 +489,39 @@ form small{
     font-size: 0.8rem;
     color: #6b7280;
 }/*Los small que acompañan a los campos con los textos "minimo 8 caracteres, entre 1 y 8 sesiones, etc"*/
+
+.boton-secundario ,.boton{
+    background-color: #c55a11;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;/*Pone la manita*/
+}
+
+/*Los tres estados*/
+/*Hover 1*/
+.boton:hover{
+    background-color: #a8490e;
+}
+/*Active 2
+mientras se pulsa*/
+.boton:active{
+    background-color: #8a3b0b;
+}
+/*Focus 3*/
+.boton:focus{
+    outline: 2px solid #f5c518;
+    outline-offset: 2px;
+}
+
+/*variante secundaria*/
+.boton-secundario{
+    background-color: #6b7280;
+}
+.boton-secundario:hover{
+    background-color: #4b5563;
+}
