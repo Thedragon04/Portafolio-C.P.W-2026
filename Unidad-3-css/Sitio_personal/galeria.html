@@ -36,19 +36,23 @@
             <h2>Galería de imágenes</h2>
             
             <section id="imagen">
-                <img src="recursos/doometernal.jpg" alt="Imagen lateral del doom slayer" width="600" height="400">
-
-                <figure>
-                    <img src="recursos/doometernal.jpg" alt="Imagen lateral del doom slayer" width="800" height="500">
-                    <figcaption>Doom slayer viendo de lateral hacia el jugador</figcaption>
-                </figure>
-
-                <picture>
-                    <source srcset="recursos/doometernal.webp" type="image/webp">
-                    <source srcset="recursos/doometernal.jpg" type="image/jpeg">
-                    <img src="recursos/doometernal.webp" alt="Imagen de Doom eternal" width="600" height="400">
-                </picture>
-                
+                <div class="imagenes">
+                    <figure>
+                        <img src="recursos/doometernal.jpg" alt="Imagen lateral del doom slayer" width="600" height="400">
+                    </figure>
+                    <figure>
+                        <img src="recursos/doometernal.jpg" alt="Imagen lateral del doom slayer" width="800" height="500">
+                        <figcaption>Doom slayer viendo de lateral hacia el jugador</figcaption>
+                    </figure>
+                    <figure class="etiqueta-desta">
+                        <picture>
+                            <source srcset="recursos/doometernal.webp" type="image/webp">
+                            <source srcset="recursos/doometernal.jpg" type="image/jpeg">
+                            <img src="recursos/doometernal.webp" alt="Imagen de Doom eternal" width="600" height="400">
+                        </picture>
+                        <span class="etiqueta">Destacado</span>
+                    </figure>
+                </div>
             </section>
 
             <section id="audio">
