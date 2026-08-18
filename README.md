@@ -113,7 +113,7 @@ Proyecto propio construido de forma autónoma.
 |  S16   | Flexbox                    |Apredimos a como utilizar el flex como mover los elementos alinearlos cmabiarlos de linea | [ver](Unidad-3-css/sitio-demo/Sitios-demo/galeria.html) | [ver](recursos/S16.png) |
 |  S17   | CSS Grid                   |Aprendimos a como utilizar grid para trabajos ya mas completos que es preferible usarlo con el flexbox| [ver](Unidad-3-css/sitio-demo/Sitios-demo/insignia.html) | [ver](recursos/S17.png) |
 |  S18   | Componentes estilizados    |Aprendimos a como estilizar las tablas como poner el hover y focus y a galeria tambien se estilizaron y se les interactividad a las trajetas| [ver](Unidad-3-css/sitio-demo/Sitios-demo/galeria.html) | [ver](recursos/S18.png) |
-|  S19   | Animaciones y filtros      |             | [ver](Unidad-3-css) | [ver](recursos/) |
+|  S19   | Animaciones y filtros      |Apremdimos a darle animaciones de diferentes tipos a todo lo que necesitemos y tambien transformaciones| [ver](Unidad-3-css/sitio-demo/Sitios-demo/galeria.html) | [ver](recursos/S19.png) |
 |  S20   | SCSS y repaso              |             | [ver](Unidad-3-css) | [ver](recursos/) |
 
 ### Unidad 4 · Páginas web responsivas (sesiones 23 a 28)
