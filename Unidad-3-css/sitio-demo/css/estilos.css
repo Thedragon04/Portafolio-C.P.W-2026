@@ -546,7 +546,12 @@ mientras se pulsa*/
 }
 
 .tarjeta figure:hover{
-    transform: translateY(-5px);/*Valor positivo va hacia arriba*/
+    transform: translateY(-5px);/*Valor positivo va hacia arriba, Posicion*/
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     /*transition: all 1s ease;*//*Adicional*/
+    transform: scale(1.03);/*Escalar .1 = del tamño original*/
+    transform: scale(1.1, 0.9);/*X y Y por separado*/
+    transform: rotate(1deg);/*gira*/
+    transform: skew(10deg);/*Inclina*/
+    transform: translateY(-5px) scale(1.03);
 }
