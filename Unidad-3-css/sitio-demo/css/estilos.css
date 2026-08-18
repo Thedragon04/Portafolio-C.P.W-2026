@@ -105,6 +105,15 @@ header nav a{
     text-decoration: none;
     /*display: inline-block;/*Pone en linea elementos*/
     padding: 10px 15px;
+    color: #fff;
+    margin-right: 15px;
+    transition: color 0.3s;/*Cambio suave*/
+    transition: background-color 0.3s ease 0.1s;
+    /*ease: Arranca lento y acelera y frena omision
+    linear: Velocidad constante
+    ease-in: Arranca lento
+    ease-out: Sale lento
+    easeint-out: Lentos en los extremos*/
 
 }
 header nav ul{
@@ -170,13 +179,8 @@ header nav li{
 
 /*estilos a solo enlaces dentro del nav*/
 
-nav a {
-    color: #fff;
-    margin-right: 15px;
-    transition: color 0.3s;/*Cambio suave*/
-}
 /*pseudo clase :hover*/
-nav a:hover {
+header nav a:hover {
     color: #f8cbad; /* al pasar el cursor*/
 }
 /* pseudo clasen _nth-child: filas cebra en la tabla*/
@@ -526,6 +530,10 @@ mientras se pulsa*/
 }
 .boton-secundario:hover{
     background-color: #4b5563;
+}
+
+.boton{
+    transition: background-color 0.3s ease;
 }
 
 .tarjeta {
