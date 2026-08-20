@@ -1,0 +1,101 @@
+/*Estudio Luz Clara*/
+
+/* Variables y conficuracion*/
+/*Un variable guarda un valor con un nombre, para poder reutilizarlo.*/
+
+/*Se declaran dentro :root, que representa el elemento html y es el ancestro de todos*/
+
+:root{
+    /*Paeta de colores*/
+    --color-tinta: #1a1a1a; /*Texto principal. casi negro*/
+    --color-suave: #6b6b6b; /*texto secundario, pies de foto*/
+    --color-marca: #2c3e50; /*el azul del estudio*/
+    --color-acento: #c87941; /*terracota de los botones*/
+    --color-acento-osc: #a45f2e; /*terracota oscuro*/
+    --color-fondo: #fafaf8; /*Blanco roto. no blanco puro*/
+    --color-fondo-alt: #f0eee9; /*para alternar fondos secciones*/
+    --color-linea: #dddad3; /*Bordes y separadores*/
+    --color-blanco: #ffffff; /*Blanco puro*/
+
+
+/*Tipografias*/
+--fuente-titulo: Georgia, 'Times New Roman', serif;
+--fuente-texto: 'Segoe UI', Arial, 'sans-serif';
+
+/*Espaciado. Coversion 1rem = 10px*/
+--esp-xs: 0.8rem; /*8px*/
+--esp-sm: 1.6rem; /*16px*/
+--esp-md: 2.4rem; /*24px*/
+--esp-lg: 4.0rem; /*40px*/
+--esp-xl: 8rem; /*80px*/
+
+/*Otros elementos*/
+    --radio: 0.6rem;
+    --sombra-1: 0 0.2rem 0.6rem rgba(0,0,0,0.06)/*Apenas separado*/
+    --sombra-2: 0 0.4rem 1.2rem rgba(0,0,0,0.10)/*Tarjetas*/
+    --sombra-3: 0 0.8rem 2.0rem rgba(0,0,0,0.16)/*Elementos elevados*/
+    --transicion: 0.25s ease;
+    --ancho-max: 120rem; /*1200px*/
+}
+
+/*Reset y base tipografica*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*La linea mas importante del reset porque sin ella, si a una caja le damos un width: 300px y ademas un padding de 20px y ademas un border de 2px la caja en realidad mid: 300+20+20+2+2 = 344px, con esta linea el relleno y el borde se descuentan hacia adentro*/
+}
+/*La base del tamaño. La tecnica del 62.5%*/
+html{
+    font-size: 62.5%;/*Por omision el navegador usa 16px para el tamaño base. el 62.5 de 16 es exatamente 10. Tiene que ver con accesibilidad y la parte renposive*/
+    scroll-behavior: smooth;/*Saltos suaves al usar navegacion por anclas*/
+
+}
+
+body{
+    font-size: 1.6rem;/*Si no se agrega esta linea no toma el valor de los 16px base y quedaria un texto casi ilegible*/
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    color: var(--color-tinta);
+    background-color: var(--color-fondo);
+}
+
+/*Jerarquia de titulos*/
+h1,h2,h3{
+    font-family: var(--fuente-titulo);
+    line-height: 1.2;
+    color: var(--color-marca);
+}
+
+h1{font-size: 4.8rem;}
+h2{font-size: 3.2rem;}
+h3{font-size: 2.0rem;}
+
+p{
+    margin-bottom: var(--esp-sm);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-acento);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Contenedores y secciones*/
+.seccion{
+    max-width: var(--ancho-max);/*Toma todo el ancho disponible*/
+    margin-left: auto;
+    margin-right: auto;/*Centra el bloque. repartiendo el espacio sobrante por igual*/
+    padding: var(--esp-xl) var(--esp-md);
+}
+
+.seccion-alterna{
+    background-color: var(--color-fondo-alt);
+    max-width: none;/*Anula el ancho maximo para el fondo acupe el ancho maximo sin importar el ancho*/
+    
+}
+
