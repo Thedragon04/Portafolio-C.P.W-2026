@@ -16,8 +16,26 @@
     --color-fondo-alt: #f0eee9; /*para alternar fondos secciones*/
     --color-linea: #dddad3; /*Bordes y separadores*/
     --color-blanco: #ffffff; /*Blanco puro*/
-}
+
 
 /*Tipografias*/
+--fuente-titulo: Georgia, 'Times New Roman', serif;
+--fuente-titulo: 'Segoe UI', Arial, 'sans-serif';
+
+/*Espaciado. Coversion 1rem = 10px*/
+--esp-xs: 0.8rem; /*8px*/
+--esp-xs: 1.6rem; /*16px*/
+--esp-md: 2.4rem; /*24px*/
+--esp-lg: 4.0rem; /*40px*/
+--esp-xl: 8rem; /*80px*/
+
+/*Otros elementos*/
+    --radio: 0.6rem;
+    --sombra-1: 0 0.2rem 0.6rem rgba(0,0,0,0.06)/*Apenas separado*/
+    --sombra-2: 0 0.4rem 1.2rem rgba(0,0,0,0.10)/*Tarjetas*/
+    --sombra-3: 0 0.8rem 2.0rem rgba(0,0,0,0.16)/*Elementos elevados*/
+    --transicion: 0.25s ease;
+    --ancho-max: 120rem; /*1200px*/
 
 
+}
