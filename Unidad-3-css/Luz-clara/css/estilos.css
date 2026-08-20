@@ -36,6 +36,18 @@
     --sombra-3: 0 0.8rem 2.0rem rgba(0,0,0,0.16)/*Elementos elevados*/
     --transicion: 0.25s ease;
     --ancho-max: 120rem; /*1200px*/
+}
 
+/*Reset y base tipografica*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*La linea mas importante del reset porque sin ella, si a una caja le damos un width: 300px y ademas un padding de 20px y ademas un border de 2px la caja en realidad mid: 300+20+20+2+2 = 344px, con esta linea el relleno y el borde se descuentan hacia adentro*/
+}
+/*La base del tamaño. La tecnica del 62.5%*/
+html{
+    font-size: 62.5%;/*Por omision el navegador usa 16px para el tamaño base. el 62.5 de 16 es exatamente 10. Tiene que ver con accesibilidad y la parte renposive*/
+    scroll-behavior: smooth;/*Saltos suaves al usar navegacion por anclas*/
 
 }
+
