@@ -143,4 +143,62 @@ img{
     margin-bottom: var(--esp-xs);
 }
 
+/*Cabecera y menu*/
 
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--esp-sm) var(--esp-md);
+    border-bottom: 0.1rem solid var(--color-linea);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: var(--esp-xs);
+    color: var(--color-marca);
+
+}
+
+.logo:hover .logo-icono{
+    transform: rotate(8deg);
+}
+
+.logo-texto{
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+    gap: var(--esp-sm);
+    list-style: none;
+}
+
+.menu-enlace{
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-sm);
+    color: var(--color-tinta);
+    font-weight: 600;
+    border-radius: var(--radio);
+    transition: background-color var(--transicion), color var(--transicion);
+}
+
+.menu-enlace:hover{
+    background-color: var(--color-fondo-alt);
+    color: var(--color-marca);
+}
+
+.menu-enlace:focus{
+    outline: 0.2rem solid var(--color-acento);
+    outline-offset: 0.2rem;/*Se activa cuando la tecla tab llega al enlace*/
+}
+
+.menu-enlace.activo{/*Dos clases del mismo elemento, El elemento que tenga las dos clases es el activo osea que cambia su color*/
+    color: var(--color-acento);
+}
