@@ -236,3 +236,45 @@ img{
     font-size: 1.8rem;
     margin-bottom: var(--esp-md);
 }
+
+/*servicios - flexbox*/
+.fila-servicios{
+    display: flex;
+    gap: var(--esp-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+    flex: 1 1 30rem;/*El 1 flex grown si sobra espacio crece. 1 flex-shire si falta espacio se encoge. y el 30rem aplica flex-basis*/
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transicion), box-shadow var(--trasicion);
+}
+
+.tarjeta-icono{
+    color: var(--color-acento);
+    margin: 0 auto;
+}
+
+.tarjeta-titulo{
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta-texto{
+    color: var(--color-suave);
+    flex-grow: 1;/*flex-grow en 1 hace que absorba todo el espacio vertical sobrante de la tarjeta*/
+}
+
+.tarjeta-precio{
+    font-weight: 700;
+    color: var(--color-marca);
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    padding-top: var(--esp-sm);
+    border-top: 0.1px solid var(--color-linea)
+}
