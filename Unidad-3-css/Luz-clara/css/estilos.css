@@ -202,3 +202,37 @@ img{
 .menu-enlace.activo{/*Dos clases del mismo elemento, El elemento que tenga las dos clases es el activo osea que cambia su color*/
     color: var(--color-acento);
 }
+
+/*Portada*/
+
+.portada{
+    background-image: url(../recursos/portada.webp);
+    background-color: var(--color-marca);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--esp-md);
+    text-align: center;
+}
+
+.portada-caja{
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: var(--esp-lg);
+    border: var(--radio);
+    max-width: 70rem;
+}
+
+.portada-titulo{
+    color: var(--color-blanco);
+    margin-bottom: var(--esp-sm);
+}
+
+.portada-bajada{
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+    margin-bottom: var(--esp-md);
+}
