@@ -99,3 +99,310 @@ img{
     
 }
 
+.seccion-alterna > *{
+    max-width: var(--ancho-max);
+    margin-left: auto;
+    margin-right: auto;/*Se limita y se centra el contenido. > esto significa que agarra a los hijos directo no otros decendientes*/
+
+}
+
+.seccion-titulo{
+    margin-bottom: var(--esp-sm);
+    text-align: center;
+
+}
+
+.seccion-entrada{
+    max-width: 65ch;/*Ancho de caracteres. esta unidad equivale a 65 caracteres por linea para lectura mas comoda*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--esp-lg);
+    text-align: center;
+
+}
+
+.pagina-encabezado{
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-xl) var(--esp-md) var(--esp-lg);
+    /*Tres valores arriba, lados, abajo*/
+    text-align: center;
+}
+
+.pagina-titulo{
+    margin-bottom: var(--esp-xs);
+}
+
+.pagina-bajada{
+    color: var(--color-suave);
+    font-size: 1.8rem;
+}
+
+.subtitulo{
+    margin-top: var(--esp-md);
+    margin-bottom: var(--esp-xs);
+}
+
+/*Cabecera y menu*/
+
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--esp-sm) var(--esp-md);
+    border-bottom: 0.1rem solid var(--color-linea);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: var(--esp-xs);
+    color: var(--color-marca);
+
+}
+
+.logo:hover .logo-icono{
+    transform: rotate(8deg);
+}
+
+.logo-texto{
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+    gap: var(--esp-sm);
+    list-style: none;
+}
+
+.menu-enlace{
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-sm);
+    color: var(--color-tinta);
+    font-weight: 600;
+    border-radius: var(--radio);
+    transition: background-color var(--transicion), color var(--transicion);
+}
+
+.menu-enlace:hover{
+    background-color: var(--color-fondo-alt);
+    color: var(--color-marca);
+}
+
+.menu-enlace:focus{
+    outline: 0.2rem solid var(--color-acento);
+    outline-offset: 0.2rem;/*Se activa cuando la tecla tab llega al enlace*/
+}
+
+.menu-enlace.activo{/*Dos clases del mismo elemento, El elemento que tenga las dos clases es el activo osea que cambia su color*/
+    color: var(--color-acento);
+}
+
+/*Portada*/
+
+.portada{
+    background-image: url(../recursos/portada.webp);
+    background-color: var(--color-marca);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--esp-md);
+    text-align: center;
+}
+
+.portada-caja{
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: var(--esp-lg);
+    border: var(--radio);
+    max-width: 70rem;
+}
+
+.portada-titulo{
+    color: var(--color-blanco);
+    margin-bottom: var(--esp-sm);
+}
+
+.portada-bajada{
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+    margin-bottom: var(--esp-md);
+}
+
+/*servicios - flexbox*/
+.fila-servicios{
+    display: flex;
+    gap: var(--esp-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+    flex: 1 1 30rem;/*El 1 flex grown si sobra espacio crece. 1 flex-shire si falta espacio se encoge. y el 30rem aplica flex-basis*/
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-icono{
+    color: var(--color-acento);
+    margin: 0 auto;
+}
+
+.tarjeta-titulo{
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta-texto{
+    color: var(--color-suave);
+    flex-grow: 1;/*flex-grow en 1 hace que absorba todo el espacio vertical sobrante de la tarjeta*/
+}
+
+.tarjeta-precio{
+    font-weight: 700;
+    color: var(--color-marca);
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    padding-top: var(--esp-sm);
+    border-top: 0.1px solid var(--color-linea)
+}
+
+/*Galeria - css grid*/
+
+/*grid dos dimensiones, cuadricula de filas y columnas*/
+
+.rejilla-galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(28rem, 1fr));
+    /*Se lee de adentro hacia afuera: minmax(28rem, 1fr): Cada columna mida 280px = 28rem y como minimo una fraccion del espacio disponible. repeat(auto-fit: crea tantas columnas como quepan con esa medida que seria de 280px  */
+    gap: var(--esp-sm);
+}
+
+.galeria-pieza{
+    position: relative;/*No mueve la figura solo le declara como un punto de referencia para los hijos*/
+    overflow: hidden;/*Recorta lo que sobre slaga de los limites de la figura, permite que a img se agrande sin invadir las otras*/
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+}
+
+.pieza-destacada{
+    grid-column: span 2;/*Ocupa 2 columnas*/
+    grid-row: span 2;
+}
+
+.galeria-pieza img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover0/*Recorta la imagen por el cemtro para no deformarla*/;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(60%);/*El filtro quita el 60% de color*/
+}
+
+.galeria-pieza:hover img{
+    transform: scale(1.6);
+    filter: grayscale(0);/*Recupera el color*/
+}
+
+.galeria-pie{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;/*Absolute se ubica con respecto al ancestro mas cercano con posicion relative*/
+    background-color: rgba(0, 0, 0, 0.65);
+    color: var(--color-blanco);
+    padding: var(--esp-xs);
+    font-size: 1.3rem;
+    text-align: center;
+    transform: translateY(100%);/*Lo deplaza hacia abajo al 100% de su altura*/
+    transition: transform var(--trasicion);
+}
+
+.galeria-pieza:hover .galeria-pie{
+    transform: translateY(0);/*El pie de foto vuelve a su posicion deslizandose desde abajo*/
+}
+
+.rejilla-equipo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: var(--esp-md);
+}
+
+.ficha {
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.ficha-foto{
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto var(--esp-md);
+    border: 0.3rem solid var(--color-fondo-alt);
+}
+
+.ficha-nombre{
+    margin-bottom: 0.2rem;
+}
+
+.ficha-rol{
+    color: var(--color-acento);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: var(--esp-xs);
+}
+
+.ficha-texto{
+    color: var(--color-suave);
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+/*Dos columnas*/
+
+.dos-columnas{
+    display: flex;
+    gap: var(--esp-lg);
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.columna-texto{
+    flex: 1 1 32rem;
+}
+
+.columna-imagen{
+    flex: 1 1 32rem;
+    margin: 0;
+}
+
+.columna-imagen img{
+    border-radius:  var(--radio);
+    box-shadow: var(--sombra-2);
+    width: 100%;
+}
+
+.imagen-pie{
+    margin-top: var(--esp-xs);
+    font-size: 1.3rem;
+    color: var(--color-suave);
+    text-align: center;
+    font-style: italic;
+}
