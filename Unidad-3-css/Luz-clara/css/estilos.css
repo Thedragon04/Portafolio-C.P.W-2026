@@ -253,7 +253,7 @@ img{
     text-align: center;
     display: flex;
     flex-direction: column;
-    transition: transform var(--transicion), box-shadow var(--trasicion);
+    transition: transform var(--transicion), box-shadow var(--transicion);
 }
 
 .tarjeta-icono{
@@ -277,4 +277,58 @@ img{
     margin-bottom: 0;
     padding-top: var(--esp-sm);
     border-top: 0.1px solid var(--color-linea)
+}
+
+/*Galeria - css grid*/
+
+/*grid dos dimensiones, cuadricula de filas y columnas*/
+
+.rejilla-galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(28rem, 1fr));
+    /*Se lee de adentro hacia afuera: minmax(28rem, 1fr): Cada columna mida 280px = 28rem y como minimo una fraccion del espacio disponible. repeat(auto-fit: crea tantas columnas como quepan con esa medida que seria de 280px  */
+    gap: var(--esp-sm);
+}
+
+.galeria-pieza{
+    position: relative;/*No mueve la figura solo le declara como un punto de referencia para los hijos*/
+    overflow: hidden;/*Recorta lo que sobre slaga de los limites de la figura, permite que a img se agrande sin invadir las otras*/
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+}
+
+.pieza-destacada{
+    grid-column: span 2;/*Ocupa 2 columnas*/
+    grid-row: span 2;
+}
+
+.galeria-pieza img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover0/*Recorta la imagen por el cemtro para no deformarla*/;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(60%);/*El filtro quita el 60% de color*/
+}
+
+.galeria-pieza:hover img{
+    transform: scale(1.6);
+    filter: grayscale(0);/*Recupera el color*/
+}
+
+.galeria-pie{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;/*Absolute se ubica con respecto al ancestro mas cercano con posicion relative*/
+    background-color: rgba(0, 0, 0, 0.65);
+    color: var(--color-blanco);
+    padding: var(--esp-xs);
+    font-size: 1.3rem;
+    text-align: center;
+    transform: translateY(100%);/*Lo deplaza hacia abajo al 100% de su altura*/
+    transition: transform var(--trasicion);
+}
+
+.galeria-pieza:hover .galeria-pie{
+    transform: translateY(0);/*El pie de foto vuelve a su posicion deslizandose desde abajo*/
 }
