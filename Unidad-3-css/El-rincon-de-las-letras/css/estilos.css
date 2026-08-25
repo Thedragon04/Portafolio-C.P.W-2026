@@ -28,6 +28,7 @@ h3{font-size: 2rem;}
 p{
     font-size: 1.6rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 70ch;
 }
 
 a{
@@ -100,14 +101,15 @@ a{
     border-radius: 1rem;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    box-shadow: 0 2px 0.8px rgba(0, 0, 0, 0.4);
+    
 
 }
 
 .boton:hover{
     background-color: #ffc782;
     transform: translateY(-0.2rem);
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 0.8px rgba(0, 0, 0, 0.4);
 }
 
 .boton:active{
@@ -122,14 +124,15 @@ a{
 }
 
 .tarjeta{
-    box-shadow: 0 2px 0.8px rgba(0, 0, 0, 0.4);
+    
     border-radius: 1rem;
     background-color: beige;
     padding: 1rem;
 }
 .tarjeta:hover{
     transform: translateY(-0.3rem);
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 0.8px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -241,13 +244,14 @@ a{
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin-right: 2rem;
     font-size: 1.6rem;
-    box-shadow: 0 2px 0.8px rgba(0, 0, 0, 0.4);
+    
 }
 
 .indice ul > li:hover{
     background-color: #ffc782;
     transform: translateY(0.2rem);
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    box-shadow: 0 -2px 0.8px rgba(0, 0, 0, 0.4);
 }
 
 .indice ul > li:active{
