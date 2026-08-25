@@ -200,30 +200,33 @@ a{
     border-left: 0.8rem solid #861e49;
 }
 
+#pie{
+    background-color: beige;
+    padding: 1.6rem 0.8rem 0.8rem;
+    margin-top: 0.8rem;
+}
 
 .pie-contenido{
-
-    background-color: beige;
-    padding: 4rem;
-    padding-left: 16rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 120rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem ;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.creditos{
-    text-align: center;
-    border-top: 0.1rem solid #861e49;
-    width: 90%;
-    bottom: 0;
-    margin-bottom: 1.5rem;
-
-}
 .datos-contacto{
     line-height: 1.8;
     font-size: 1.6rem;
+    
 }
+.creditos{
+    max-width: 120rem;
+    display: block;
+    text-align: center;
+    border-top: 0.1rem solid #861e49;
+
+}
+
 
 /*Catalogo*/
 
