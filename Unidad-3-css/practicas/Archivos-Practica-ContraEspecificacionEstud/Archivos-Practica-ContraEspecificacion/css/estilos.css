@@ -39,6 +39,7 @@ body {
     background: var(--fondo);
     }
 
+
     h1, h2, h3 {
     font-family: Georgia, 'Times New Roman', serif;
     line-height: 1.2;
@@ -98,10 +99,23 @@ p { margin-bottom: var(--esp-sm); }
 }
 
 /*main*/
-#contenido{
+.seccion{
     margin: 0 auto;
-    
+    max-width: var(--ancho);
 }
+.seccion-alterna{
+    max-width: none;
+    background-color: var(--fondo-a);
+}
+.seccion-alterna > *{
+    max-width: var(--ancho);
+    margin: 0 auto;
+}/*Primero hace un reinicio del tamaño del contenedor y luego con "*" se toman los hijos de seccion-alterna para ordenarlos hacia el centro*/
+.seccion-titulo{
+    text-align: center;
+    padding-top: var(--esp-xl);
+}
+
 .presentacion{
     background-color: var(--marca);
     display: flex;
@@ -128,6 +142,12 @@ p { margin-bottom: var(--esp-sm); }
     text-align: center;
 }
 
+
+.presentacion-saludo ,.presentacion-titulo,.presentacion-texto{
+    color: var(--blanco);
+}
+
+/*Botones*/
 .boton{
     padding: 0.5rem 1.5rem;
     border-radius: var(--radio);
@@ -135,10 +155,165 @@ p { margin-bottom: var(--esp-sm); }
     color: var(--blanco);
     font-weight: 600;
 }
-.presentacion-saludo ,.presentacion-titulo,.presentacion-texto{
-    color: var(--blanco);
+
+/*Perfil*/
+
+.dos-columnas{
+    margin-top: var(--esp-md);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
+.columna-texto{
+    margin-right: 1.8rem;
+}
+
+.cita{
+    border-left: 0.5rem solid var(--acento);
+    background-color: var(--blanco);
+    border-radius: 0 1rem 1rem 0;
+    padding: 1.6rem;
+    position: relative;
+    box-shadow: var(--sombra-1);
+}
+
+.cita-autoria{
+    text-align: right;
+    font-size: 1.2rem;
+    opacity: 50%;
+}
+
+.cita::before{
+    content: "\201C";
+    position: absolute;
+    font-size: 6rem;
+    top: -2.4rem;
+    left: 0.1rem;
+    font-family: Arial, sans-serif;
+    opacity: 50%;
+    color: var(--acento);
+    
+}
+
+.columna-lista{
+    margin-left: var(--esp-lg);
+    margin-top: var(--esp-md);
+}
+
+.lista-servicios{
+    margin-top: 0.4rem;
+    margin-left: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+.lista-servicios li >ul >li{
+    margin-left: 2rem;
+    padding: 0.8rem;
+}
+.glosario{
+    margin-bottom: 8rem;
+}
+.glosario-termino{
+    font-weight: 700;
+    color: var(--marca);
+}
+.glosario-definicion{
+    padding-bottom: var(--esp-sm);
+    padding-left: var(--esp-md);
+}
+
+/*Trabajos*/
+
+
+
+.seccion-entrada{
+    text-align: center;
+    padding-bottom: var(--esp-lg);
+    padding-top: var(--esp-xs);
+}
+
+.rejilla-trabajos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-md);
+    padding-bottom: var(--esp-xl);
+    
+}
+
+.trabajo{
+    flex: 1 1 30rem;
+    background-color: var(--blanco);
+    border-radius: var(--esp-xs);
+    padding: var(--esp-md) var(--esp-md);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: var(--sombra-2);
+}
+
+.trabajo-etiqueta{
+    background-color: var(--fondo-a);
+    border-radius: var(--esp-md);
+    padding: 0.3rem 1rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--marca);
+    font-size: 1.4rem;
+    max-width: 10.5rem;
+    text-align: center;
+}
+.trabajo-titulo{
+    margin-top: var(--esp-xs);
+}
+.trabajo-texto{
+    margin-top: var(--esp-sm);
+    opacity: 80%;
+}
+.trabajo-anio{
+    border-top: 0.1rem solid var(--tinta);
+    color: var(--acento);
+    font-weight: 700;
+    margin: 0;
+}
+
+/*Tabla*/
+
+.tabla-titulo{
+    text-align: left;
+}
+
+.tabla{
+    width: 100%;
+    border: 0.1rem solid var(--linea);
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    margin-bottom: var(--esp-xl);
+}
+
+.tabla thead{
+    background-color: var(--marca);
+    color: var(--blanco);
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+.tabla tfoot{
+    background-color: var(--fondo-a);
+    border-top: 0.3rem solid var(--tinta);
+    font-style: italic;
+}
+
+.tabla th,.tabla td{
+    padding: var(--esp-md);
+    text-align: left;
+}
+
+.tabla tbody th{
+    color: var(--marca);
+}
 
 
 
