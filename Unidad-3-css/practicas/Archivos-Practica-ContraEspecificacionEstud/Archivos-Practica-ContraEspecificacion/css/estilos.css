@@ -57,6 +57,33 @@ a{
 
 p { margin-bottom: var(--esp-sm); }
 
+/*Botones*/
+.boton{
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radio);
+    color: var(--blanco);
+    font-weight: 600;
+    border: none;
+    transition: var(--trans);
+}
+.boton-principal{
+    background-color: var(--acento);
+}
+.boton-secundario{
+    background-color: var(--fondo-a);
+    color: var(--tinta);
+}
+.boton-principal:hover{
+    background-color: var(--acento-o);
+    transition: var(--trans);
+    transform: translateY(-0.2rem);
+}
+.boton-secundario:hover{
+    background-color: #e7d0b8;
+    transition: var(--trans);
+    transform: translateY(-0.2rem);
+    
+}
 
 /*Cabecera*/
 .cabecera{
@@ -147,15 +174,6 @@ p { margin-bottom: var(--esp-sm); }
     color: var(--blanco);
 }
 
-/*Botones*/
-.boton{
-    padding: 0.5rem 1.5rem;
-    border-radius: var(--radio);
-    background-color: var(--acento);
-    color: var(--blanco);
-    font-weight: 600;
-}
-
 /*Perfil*/
 
 .dos-columnas{
@@ -230,6 +248,7 @@ p { margin-bottom: var(--esp-sm); }
     text-align: center;
     padding-bottom: var(--esp-lg);
     padding-top: var(--esp-xs);
+    opacity: 80%;
 }
 
 .rejilla-trabajos{
@@ -250,6 +269,13 @@ p { margin-bottom: var(--esp-sm); }
     flex-wrap: wrap;
     justify-content: space-between;
     box-shadow: var(--sombra-2);
+    transition: var(--trans);
+}
+
+.trabajo:hover{
+    transform: translateY(-0.5rem);
+    box-shadow: var(--sombra-3);
+    transition: .25s ease-out;
 }
 
 .trabajo-etiqueta{
@@ -280,8 +306,18 @@ p { margin-bottom: var(--esp-sm); }
 
 /*Tabla*/
 
+
+#trayectoria .seccion-titulo{
+    margin-bottom: var(--esp-lg);
+}
+#trayectoria .tabla-titulo{
+    padding-bottom: var(--esp-xs);
+}
 .tabla-titulo{
     text-align: left;
+    padding-left: var(--esp-md);
+    font-weight: 600;
+    opacity: 70%;
 }
 
 .tabla{
@@ -308,17 +344,89 @@ p { margin-bottom: var(--esp-sm); }
 
 .tabla th,.tabla td{
     padding: var(--esp-md);
+    border-bottom: 0.2rem solid var(--fondo-a);
     text-align: left;
+}
+.tabla tbody tr:nth-last-child(even){
+    background-color: var(--fondo);
 }
 
 .tabla tbody th{
     color: var(--marca);
 }
 
+/**/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    max-width: 65rem;
+    font-family: inherit;
+    gap: var(--esp-md);
+}
+.grupo{
+    background-color: var(--blanco);
+    border-radius: var(--radio);
+    padding: var(--esp-md);
 
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+    
+}
+.campo-entrada{
+    font-family: inherit;
+    background-color: var(--fondo);
+    border-style: none;
+    border: 0.1rem solid var(--fondo-a);
+    border-radius: var(--radio);
+    padding: 0.5rem 1rem;
+}
+.campo-entrada:focus{
+    outline: none;
+    border: 0.1rem solid var(--acento);
+    transition: var(--trans);
+    box-shadow: 0 0 0 .3rem rgba(196, 107, 74, 0.18);/*Copiado porque no tenia ni idea del color*/
 
+}
 
+.grupo-titulo{
+    color: var(--marca);
+    padding: 0 1rem;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.grupo-opciones{
+    border: none;
+    padding-top: var(--esp-xs);
+    
+}
 
+.opcion{
+    display: flex;
+    align-items: center;
+}
+.grupo > .opcion{
+    margin: 0.5rem;
+}
 
+.opcion-marca{
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    accent-color: var(--acento);
+}
+.opcion-etiqueta{
+    padding-left: var(--esp-xs);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.fila-botones{
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--esp-md);
+    margin-bottom: var(--esp-xl);
+}
 
 
