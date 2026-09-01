@@ -1,0 +1,7 @@
+index
+El menú esta mal se desborda 
+Las imágenes no toman su tamaño
+galería
+Las imágenes no toman su tamaño
+Hay un scroll horizontal
+La tabla tiene su propio scroll
