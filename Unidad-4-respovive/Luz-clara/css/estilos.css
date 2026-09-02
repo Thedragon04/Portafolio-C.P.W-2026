@@ -2033,3 +2033,36 @@ body{ font-size: 1.6rem;}
     max-width: 65ch;
   }
 }
+/*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
+
+/* PUNTOS DE QUIEBRE
+    hasta              hasta 767px              telefono
+    768px              tableta
+    1024px             escritorio
+
+
+/*TABLETA . a partir de 768px
+@media (min-width:768) {
+    cabecera se fija
+    titulos más grandes
+    más relleno en las secciones*/
+
+/*ESCRITORIO . a partir de 1024px
+@media (min-width:1024) {
+    cabecera se fija
+    titulos más grandes
+    más relleno en las secciones
+}
+/*AJUSTES SOLO PARA PANTALLA PEQUEÑA
+@media (max-width:768) {
+    celdas de la tabla más compactas
+}
+
+ACCESIBILIDAD DEL MOVIMIENTO
+@media (prefer-reduce-motion: reduce) {
+    Va siempre al final de todo. Desactivas las animaciones desde el so del dispositivo en uso.
+}
+
+
+/*Estos encabezados NO son decorativos.
+Quien abra esta hoja de estilos o usted mismo dentro de 6 meses sepa o tenga una idea de lo que se hizo y de la estrategia que se usó*/
