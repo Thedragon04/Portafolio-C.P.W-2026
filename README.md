@@ -120,8 +120,8 @@ Proyecto propio construido de forma autónoma.
 
 | Sesión | Tema                            | Qué aprendí |          Trabajo          |     Captura      |
 | :----: | :------------------------------ | :---------- | :-----------------------: | :--------------: |
-|  S23   | Viewport y anchos fluidos       |             | [ver](Unidad-4-respovive) | [ver](recursos/) |
-|  S24   | Media queries y mobile-first    |             | [ver](Unidad-4-respovive) | [ver](recursos/) |
+|  S23   | Viewport y anchos fluidos       |Diferenciacion de viewport y porque es importante para los anchos fluidos y los puntos de quiebre| [ver](Unidad-4-respovive/Luz-clara/index.html) | [ver](recursos/) |
+|  S24   | Media queries y mobile-first    |Vimos los puntos de quiebre de la paginas y los estuvimos traveseando y vimos la importancia de primero hacer las cosas para movil y luego para pc| [ver](Unidad-4-respovive/Luz-clara/index.html) | [ver](recursos/S24%20(2).png) |
 |  S25   | Menú responsivo e impresión     |             | [ver](Unidad-4-respovive) | [ver](recursos/) |
 |  S26   | Imágenes y video adaptativos    |             | [ver](Unidad-4-respovive) | [ver](recursos/) |
 |  S27   | Patrones de diseño adaptativo I |             | [ver](Unidad-4-respovive) | [ver](recursos/) |
