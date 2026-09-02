@@ -1966,5 +1966,70 @@ img {
   .cita{
     padding: var(--esp-lg);
   }
-  
+}
+
+/*apartir de los 1024pc*/
+
+@media (min-width: 1024px){
+  h1 {font-size: 4.8rem;} /*h1 recupera el tamaño original*/
+
+
+  .portada{min-height: 55rem;}/*Una portada con 50px de alto ocupa casi toda la pantalla */
+
+  .seccion {
+    padding: var(--esp-xl) var(--esp-lg);
+  }
+
+
+}
+/*Cuantos puntos de quiebre hacen falta
+para luz clara basta con estos dos
+
+base              hasta767px            telefono
+768px             tableta                
+1024px            escritorio
+*/
+
+/*Como se acumulan las reglas 
+la base 1200px
+la min width: 768px (1200 es mayor que 768)
+la min width: 1024px (1200 es mayor que 1024)
+donde se repita una propiedad, gana la ultima.
+por eso el orden importa: de menor a mayor.
+Si la de 1024 estuviera antes de las reglas de 768, la ultima la anularia en pantallas grandes
+*/
+
+h1{font-size: 3.2rem;}
+h2{font-size: 2.4rem;}
+h3{font-size: 1.8rem;}
+body{ font-size: 1.6rem;}
+
+
+@media (min-width: 768px){
+  h1 {font-size: 4.0rem;}
+  h1 {font-size: 2.8rem;}
+  h1 {font-size: 1.9rem;}
+}
+
+@media (min-width: 1024px){
+  h1 {font-size: 4.8rem;}
+  h1 {font-size: 3.2rem;}
+  h1 {font-size: 2.0rem;}
+}
+
+.tabla-envoltorio{
+  overflow: auto;
+}
+
+@media (max-width: 768px){/*Se usa max en vez de min porque el media query ataca la parte movil, lo ajusta solo para movil*/
+  .tabla th, .tabla td{
+    padding:  var( --esp-xs);
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px){
+  main p {
+    max-width: 65ch;
+  }
 }
