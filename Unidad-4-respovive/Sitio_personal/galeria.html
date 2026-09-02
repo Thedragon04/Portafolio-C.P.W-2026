@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sitio de compras de la api de doom"/>
+    <meta name="keywords" content="Doom, Slayer, videojuego, id Software"/>
+    <meta name="author" content="Jafeth" />
+    <link rel="icon" type="image/png" href="recursos/icon.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aubrey&family=Faculty+Glyphic&display=swap"
+        rel="stylesheet"/>
+    <title>Doom eternal fan site</title>
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- HEADER -->
+        <header id="inicio" class="encabezado">
+
+            <div class="contenedor-encabezado">
+
+                <h1 class="titulo-principal">
+                    Doom
+                </h1>
+
+
+                <!-- NAVEGACIÓN -->
+                <nav class="navegacion-principal">
+
+                    <ul class="lista-navegacion">
+
+                        <li class="item-navegacion">
+                            <a
+                                href="index.html"
+                                class="enlace-navegacion">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="item-navegacion">
+                            <a
+                                href="listas.html"
+                                class="enlace-navegacion">
+                                Demonios de Eternal
+                            </a>
+                        </li>
+
+                        <li class="item-navegacion">
+                            <a
+                                href="contacto.html"
+                                class="enlace-navegacion">
+                                Contacto
+                            </a>
+                        </li>
+
+                        <li class="item-navegacion">
+                            <a
+                                href="galeria.html"
+                                class="enlace-navegacion">
+                                Galería
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal">
+
+
+            <article class="articulo-galeria">
+
+
+                <!-- TÍTULO -->
+                <div class="encabezado-galeria">
+
+                    <h2 class="titulo-galeria">
+                        Galería de imágenes
+                    </h2>
+
+                </div>
+
+
+                <!-- SECCIÓN DE IMÁGENES -->
+                <section id="imagen" class="seccion-imagenes">
+
+                    <div class="contenedor-imagenes">
+
+
+                        <!-- IMAGEN 1 -->
+                        <div class="contenedor-imagen">
+
+                            <figure class="figura-imagen">
+
+                                <img
+                                    src="recursos/doometernal.jpg"
+                                    alt="Imagen lateral del Doom Slayer"
+                                    width="600"
+                                    height="400"
+                                    class="imagen-galeria">
+
+                            </figure>
+
+                        </div>
+
+
+                        <!-- IMAGEN 2 -->
+                        <div class="contenedor-imagen">
+
+                            <figure class="figura-imagen">
+
+                                <img
+                                    src="recursos/doometernal.jpg"
+                                    alt="Imagen lateral del Doom Slayer"
+                                    width="800"
+                                    height="500"
+                                    class="imagen-galeria">
+
+                                <figcaption class="descripcion-imagen">
+                                    Doom Slayer viendo de lateral hacia el jugador
+                                </figcaption>
+
+                            </figure>
+
+                        </div>
+
+
+                        <!-- IMAGEN DESTACADA -->
+                        <div class="contenedor-imagen imagen-destacada">
+
+                            <figure class="figura-imagen etiqueta-desta">
+
+                                <picture class="imagen-responsive">
+
+                                    <source
+                                        srcset="recursos/doometernal.webp"
+                                        type="image/webp">
+
+                                    <source
+                                        srcset="recursos/doometernal.jpg"
+                                        type="image/jpeg">
+
+                                    <img
+                                        src="recursos/doometernal.webp"
+                                        alt="Imagen de Doom Eternal"
+                                        width="600"
+                                        height="400"
+                                        class="imagen-galeria">
+
+                                </picture>
+
+
+                                <span class="etiqueta">
+                                    Destacado
+                                </span>
+
+                            </figure>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECCIÓN DE AUDIO -->
+                <section id="audio" class="seccion-audio">
+
+                    <div class="contenedor-audio">
+
+                        <h3 class="titulo-multimedia">
+                            OST de Doom Eternal
+                        </h3>
+
+
+                        <div class="reproductor-audio">
+
+                            <audio
+                                controls
+                                class="audio-doom">
+
+                                <source
+                                    src="recursos/Doom-eternal-ost.ogg"
+                                    type="audio/ogg">
+
+                                <source
+                                    src="recursos/Doom-eternal-ost.mp3"
+                                    type="audio/mpeg">
+
+                                <a
+                                    href="recursos/Doom-eternal-ost.ogg"
+                                    download
+                                    class="enlace-descarga">
+
+                                    Descargar archivo de audio
+
+                                </a>
+
+                                Tu navegador no soporta el elemento de audio.
+
+                            </audio>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECCIÓN DE VIDEO -->
+                <section id="video" class="seccion-video">
+
+                    <div class="contenedor-video">
+
+                        <h3 class="titulo-multimedia">
+                            Video de gameplay
+                        </h3>
+
+
+                        <div class="reproductor-video">
+
+                            <video
+                                controls
+                                width="600"
+                                height="400"
+                                poster="recursos/doometernal.webp"
+                                preload="metadata"
+                                class="video-doom">
+
+                                <source
+                                    src="recursos/Glorykills.webm"
+                                    type="video/webm">
+
+                                <source
+                                    src="recursos/Glorykills.mp4"
+                                    type="video/mp4">
+
+                                <track
+                                    src="recursos/Glorykills.vtt"
+                                    kind="subtitles"
+                                    srclang="es"
+                                    label="Español"
+                                    default>
+
+                                Tu navegador no soporta el elemento de video.
+
+                            </video>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECCIÓN SVG -->
+                <section class="svg-2 seccion-svg">
+
+                    <div class="contenedor-svg">
+
+                        <h3 class="titulo-multimedia">
+                            Imagen SVG
+                        </h3>
+
+
+                        <div class="imagen-svg">
+
+                            <svg
+                                width="200"
+                                height="200"
+                                viewBox="0 -40 100 200"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <circle
+                                    cx="52"
+                                    cy="52"
+                                    r="50"
+                                    fill="yellow"
+                                    stroke="black"
+                                    stroke-width="2"/>
+
+                                <line
+                                    x1="0"
+                                    y1="100"
+                                    x2="100"
+                                    y2="0"
+                                    stroke="red"
+                                    stroke-width="5"/>
+
+                                <line
+                                    x1="100"
+                                    y1="100"
+                                    x2="0"
+                                    y2="0"
+                                    stroke="red"
+                                    stroke-width="5"/>
+
+                                <circle
+                                    cx="52"
+                                    cy="52"
+                                    r="25"
+                                    fill="yellow"
+                                    stroke="black"
+                                    stroke-width="2"/>
+
+                                <circle
+                                    cx="52"
+                                    cy="52"
+                                    r="5"
+                                    fill="blue"
+                                    stroke="black"
+                                    stroke-width="2"/>
+
+                                <text
+                                    x="52"
+                                    y="120"
+                                    text-anchor="middle"
+                                    font-size="14"
+                                    fill="black">
+
+                                    Punto de vista
+
+                                </text>
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </article>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer id="final" class="pie-pagina">
+
+            <div class="contenedor-footer">
+
+                <p class="texto-footer">
+                    &copy; 2026 Jafeth Espinoza Villarreal.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

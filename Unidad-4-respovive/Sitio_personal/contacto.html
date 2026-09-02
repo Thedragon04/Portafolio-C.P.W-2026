@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sitio de compras de la api de doom"/>
+    <meta name="keywords" content="Doom, Slayer, videojuego, id Software"/>
+    <meta name="author" content="Jafeth" />
+    <link rel="icon" type="image/png" href="recursos/icon.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aubrey&family=Faculty+Glyphic&display=swap"
+        rel="stylesheet"/>
+    <title>Doom eternal fan site</title>
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+
+        <!-- HEADER -->
+        <header id="inicio" class="encabezado">
+
+            <div class="contenedor-encabezado">
+
+                <h1 class="titulo-principal">
+                    Doom pregunta
+                </h1>
+
+
+                <!-- NAVEGACIÓN -->
+                <nav class="navegacion-principal">
+
+                    <ul class="lista-navegacion">
+
+                        <li class="item-navegacion">
+                            <a href="index.html" class="enlace-navegacion">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="item-navegacion">
+                            <a href="listas.html" class="enlace-navegacion">
+                                Demonios de Eternal
+                            </a>
+                        </li>
+
+                        <li class="item-navegacion">
+                            <a href="contacto.html" class="enlace-navegacion">
+                                Contacto
+                            </a>
+                        </li>
+
+                        <li class="item-navegacion">
+                            <a href="galeria.html" class="enlace-navegacion">
+                                Galería
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal">
+
+
+            <!-- TÍTULO DEL FORMULARIO -->
+            <div class="encabezado-contacto">
+
+                <h2 class="titulo-contacto">
+                    ¿Tienes preguntas sobre Doom? ¡Contáctanos!
+                </h2>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+            <div class="contenedor-formulario">
+
+                <form
+                    action="#"
+                    method="post"
+                    class="formulario-contacto">
+
+
+                    <!-- DATOS PERSONALES -->
+                    <fieldset class="grupo-formulario">
+
+                        <legend class="titulo-grupo">
+                            Formulario de contacto
+                        </legend>
+
+
+                        <!-- NOMBRE -->
+                        <div class="campo-formulario">
+
+                            <label
+                                for="nombre"
+                                class="etiqueta-formulario">
+
+                                Nombre:
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                class="entrada-formulario"
+                                required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="campo-formulario">
+
+                            <label
+                                for="email"
+                                class="etiqueta-formulario">
+
+                                Email:
+
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="entrada-formulario"
+                                required>
+
+                        </div>
+
+
+                        <!-- MENSAJE -->
+                        <div class="campo-formulario campo-mensaje">
+
+                            <label
+                                for="mensaje"
+                                class="etiqueta-formulario">
+
+                                Mensaje:
+
+                            </label>
+
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                maxlength="200"
+                                placeholder="Indica el tema de tu mensaje ejemplo: Dudas sobre el juego, quejas sobre la página, etc."
+                                rows="4"
+                                cols="50"
+                                class="area-mensaje"
+                                required>
+                            </textarea>
+
+                        </div>
+
+
+                        <!-- FECHA Y HORARIO -->
+                        <fieldset class="grupo-cita">
+
+                            <legend class="titulo-grupo">
+                                Fecha en la que desea ser atendido
+                            </legend>
+
+
+                            <!-- FECHA -->
+                            <div class="campo-formulario">
+
+                                <label
+                                    for="fecha"
+                                    class="etiqueta-formulario">
+
+                                    Fecha de cita:
+
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="fecha"
+                                    name="fecha"
+                                    class="entrada-formulario"
+                                    required>
+
+                            </div>
+
+
+                            <!-- HORARIO -->
+                            <div class="contenedor-horarios">
+
+                                <p class="titulo-horario">
+                                    Horario de atención:
+                                </p>
+
+
+                                <div class="campo-opcion">
+
+                                    <input
+                                        type="radio"
+                                        id="dia-tarde"
+                                        name="hora"
+                                        value="manana"
+                                        class="opcion-formulario"
+                                        required>
+
+                                    <label
+                                        for="dia-tarde"
+                                        class="etiqueta-opcion">
+
+                                        10:00 AM - 2:00 PM
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="campo-opcion">
+
+                                    <input
+                                        type="radio"
+                                        id="tarde"
+                                        name="hora"
+                                        value="tarde"
+                                        class="opcion-formulario">
+
+                                    <label
+                                        for="tarde"
+                                        class="etiqueta-opcion">
+
+                                        2:00 PM - 6:00 PM
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+                    </fieldset>
+
+
+                    <!-- TEMA DE INTERÉS -->
+                    <fieldset class="grupo-formulario grupo-intereses">
+
+                        <legend class="titulo-grupo">
+                            Tema de interés
+                        </legend>
+
+
+                        <div class="contenedor-opciones">
+
+
+                            <div class="campo-opcion">
+
+                                <input
+                                    type="checkbox"
+                                    id="demonios"
+                                    name="tema"
+                                    value="demonios"
+                                    class="opcion-formulario">
+
+                                <label
+                                    for="demonios"
+                                    class="etiqueta-opcion">
+
+                                    Demonios
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="campo-opcion">
+
+                                <input
+                                    type="checkbox"
+                                    id="personajes"
+                                    name="tema"
+                                    value="personajes"
+                                    class="opcion-formulario">
+
+                                <label
+                                    for="personajes"
+                                    class="etiqueta-opcion">
+
+                                    Personajes
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="campo-opcion">
+
+                                <input
+                                    type="checkbox"
+                                    id="armas"
+                                    name="tema"
+                                    value="armas"
+                                    class="opcion-formulario">
+
+                                <label
+                                    for="armas"
+                                    class="etiqueta-opcion">
+
+                                    Armas
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="campo-opcion">
+
+                                <input
+                                    type="checkbox"
+                                    id="niveles"
+                                    name="tema"
+                                    value="niveles"
+                                    class="opcion-formulario">
+
+                                <label
+                                    for="niveles"
+                                    class="etiqueta-opcion">
+
+                                    Niveles
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- CONFIRMACIÓN -->
+                    <fieldset class="grupo-formulario grupo-confirmacion">
+
+                        <legend class="titulo-grupo">
+                            Confirmar mensaje
+                        </legend>
+
+
+                        <div class="texto-confirmacion">
+
+                            <p>
+                                Al enviar este formulario, confirmo que la
+                                información proporcionada es correcta.
+                            </p>
+
+                        </div>
+
+
+                        <div class="campo-opcion">
+
+                            <input
+                                type="checkbox"
+                                id="confirmar"
+                                name="confirmar"
+                                class="opcion-formulario"
+                                required>
+
+                            <label
+                                for="confirmar"
+                                class="etiqueta-opcion">
+
+                                Confirmo la información
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- BOTONES -->
+                    <div class="contenedor-botones">
+
+                        <button
+                            type="submit"
+                            class="boton-formulario boton-enviar">
+
+                            Enviar
+
+                        </button>
+
+
+                        <button
+                            type="reset"
+                            class="boton-formulario boton-limpiar">
+
+                            Limpiar formulario
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- VOLVER AL INICIO -->
+            <div class="volver-inicio">
+
+                <a
+                    href="#inicio"
+                    class="enlace-volver">
+
+                    Volver al inicio de la página
+
+                </a>
+
+            </div>
+
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer id="final" class="pie-pagina">
+
+            <div class="contenedor-footer">
+
+                <p class="texto-footer">
+                    &copy; 2026 Jafeth Espinoza Villarreal.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+</body>
+
+</html>
