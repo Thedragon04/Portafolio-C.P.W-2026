@@ -2052,6 +2052,8 @@ img {
     padding: var(--esp-xs) var(--esp-sm);
   }
 
+  
+
 }
 /*Cuantos puntos de quiebre hacen falta
 para luz clara basta con estos dos
@@ -2121,6 +2123,27 @@ body{ font-size: 1.6rem;}
     border-radius: var(--radio);
   }
 }
+
+@media (min-width: 768px){
+  .menu-boton{
+    display: none;
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+@media (orientation: landscape) and (max-height: 500px){
+  .portada{
+    min-height: 100vh;
+    padding: var(--esp-md);
+  }
+
+  .portada-titulo{font-size: 2.4rem;}
+  .portada-bajada{font-size: 1.5rem;}
+}
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
 
 /* PUNTOS DE QUIEBRE
@@ -2154,3 +2177,14 @@ ACCESIBILIDAD DEL MOVIMIENTO
 
 /*Estos encabezados NO son decorativos.
 Quien abra esta hoja de estilos o usted mismo dentro de 6 meses sepa o tenga una idea de lo que se hizo y de la estrategia que se usó*/
+
+/*Las consultas disponibles
+@media (min-width: 768px) ancho minimo
+@media (max-width: 768px) ancho maximo
+@media (min-heigth: 600px) alto minimo
+@media (orientation: portrait) vertical 
+@media (orientation: landscape) horizontal
+@media print impresion de la pagina
+@media (prefers-reduced-motion) preferencia de movimiento
+@media (prefers-color-scheme: dark) tema oscuro
+*/
