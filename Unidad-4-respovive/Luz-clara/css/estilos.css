@@ -414,10 +414,61 @@ img {
   gap: 0;
   list-style: none;
   align-items: center;
+  width: 100%;
+  display: none;
   /* El menú es una LISTA por su significado —es un conjunto de
      enlaces del mismo nivel— pero no debe VERSE como lista. Por eso
      se quitan las viñetas con list-style.                             */
 }
+
+/*Menu hamburguesa*/
+.menu-control{
+  position: absolute;
+  opacity: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+.menu-boton{
+  display: flex;
+  align-items: center;
+  gap: var(--esp-xs);
+  cursor: pointer;
+  padding: var(--esp-xs);
+}
+
+.menu-barra{/*Barras del menu */
+  display: block;
+  width: 2.4rem;
+  height: 0.3rem;
+  background-color: var(--color-marca);
+  border-radius: 0.2rem;
+}
+.caja-menu-barra{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-barra + .menu-barra{
+  margin-top: 0.4rem;
+}
+.menu-texto{
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/*Menu abierto cuando la casilla esta marcada*/
+.menu-control:checked ~ .menu{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-boton:focus-within{
+  outline: 0.2rem solid var(--color-acento);
+  outline-offset: 0.2rem;
+}
+
+
 
 .menu-enlace {
   /*display: inline-block;
