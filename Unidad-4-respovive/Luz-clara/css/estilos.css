@@ -2080,14 +2080,14 @@ body{ font-size: 1.6rem;}
 
 @media (min-width: 768px){
   h1 {font-size: 4.0rem;}
-  h1 {font-size: 2.8rem;}
-  h1 {font-size: 1.9rem;}
+  h2 {font-size: 2.8rem;}
+  h3 {font-size: 1.9rem;}
 }
 
 @media (min-width: 1024px){
   h1 {font-size: 4.8rem;}
-  h1 {font-size: 3.2rem;}
-  h1 {font-size: 2.0rem;}
+  h2 {font-size: 3.2rem;}
+  h3 {font-size: 2.0rem;}
 }
 
 .tabla-envoltorio{
@@ -2188,3 +2188,44 @@ Quien abra esta hoja de estilos o usted mismo dentro de 6 meses sepa o tenga una
 @media (prefers-reduced-motion) preferencia de movimiento
 @media (prefers-color-scheme: dark) tema oscuro
 */
+
+@media print {
+  /*quitar lo que no sirve en el papel*/
+  .cabecera,
+  .menu-boton,
+  .pie,
+  .boton,
+  .volver-arriba,
+  .fila-etiquetas{
+    display: none;
+  }
+
+
+  /*ahorrar tinta*/
+  body{
+    background: white;
+    color:  black;
+    font-size: 11pt;
+  }
+
+  .seccion, .seccion-alterna{
+    background: none;
+    padding: 0;
+    max-width: none;
+  }
+
+  .tarjeta, .ficha, figure, .tabla{
+    page-break-inside: avoid;
+  }
+
+  h1,h2,h3{
+    page-break-after: avoid;
+  }
+  /*Mostrar los enlaces*/
+  main a[href^="http"]::after{
+    content: "(" attr(href)")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+}
