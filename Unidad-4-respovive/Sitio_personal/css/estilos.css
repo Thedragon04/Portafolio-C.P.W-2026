@@ -21,8 +21,12 @@ html {
 --fuente-titulos: "Aubrey", Arial, Helvetica, sans-serif;
 
 
---color-texto: #333;
---fondo-blanco-roto: #f7f7f7;
+--color-texto: #e5e5e5;
+--fondo: #4a4a4a;
+--texto-hover: #4caf50;
+--texto-hover: #ff4500;
+--color-extra: #ff5a1f;
+--color-extra-2: #ffc107;
 
 
 --esp-xs: 0.8rem;
@@ -36,10 +40,13 @@ html {
 --ancho-max: 120rem;    
 }
 
-
+body{
+    background-color: var(--fondo);
+}
 body p, a{
     font-family: var(--fuente-texto);
     font-size: 1.6rem;
+    color: var(--color-texto);
 }
 
 h1{font-size: 4rem;}
@@ -49,9 +56,10 @@ h4{font-size: 2.5rem;}
 
 h1, h2, h3, h4{
     font-family: var(--fuente-titulos);
+    color: var(--color-texto);
 }
 
-a , li{text-decoration: none; list-style: none;}
+a, li{text-decoration: none; list-style: none;}
 
 img{
     max-width: 100%;
@@ -83,4 +91,22 @@ img{
 .lista-navegacion{
     display: flex;
     gap: var(--esp-sm);
+}
+/*header*/
+
+
+/*main*/
+.menu-de-anclas-internas{
+    margin-top: var(--esp-sm);
+    margin-bottom: var(--esp-xs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--esp-xs);
+}
+.lista-anclas{
+    display: flex;
+    align-items: center;
+    
+    gap: var(--esp-md);
 }
