@@ -1984,7 +1984,22 @@ img {
   .seccion {
     padding: var(--esp-xl) var(--esp-lg);
   }
+  .cabecera{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .menu{
+    gap: var(--esp-sm);
+    flex-direction: row;
+    width: 100%;
+  }
+  .menu-enlace{
+    border-bottom: none;
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-sm);
+  }
 
 }
 /*Cuantos puntos de quiebre hacen falta
@@ -2036,6 +2051,23 @@ body{ font-size: 1.6rem;}
 @media (min-width: 768px){
   main p {
     max-width: 65ch;
+  }
+  .cabecera{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu{
+    gap: var(--esp-sm);
+    flex-direction: row;
+    width: 100%;
+  }
+  .menu-enlace{
+    border-bottom: none;
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-sm);
+    border-radius: var(--radio);
   }
 }
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
