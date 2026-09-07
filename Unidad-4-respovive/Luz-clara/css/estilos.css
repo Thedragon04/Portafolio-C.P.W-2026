@@ -1065,6 +1065,15 @@ img {
   text-align: right;
 }
 
+/*Pequeños cambios para base de telefono*/
+#testimonio p,
+.cita-texto{
+  font-size: 1.6rem;
+  line-height: 1.6 ;
+  }
+
+
+
 
 /* 12 · TABLA           tema de la S18
 
@@ -2198,6 +2207,23 @@ body{ font-size: 1.6rem;}
        redondeadas dejan franjas del fondo que se ven como un error
        de encuadre.                                                   */
   }
+}
+
+@media(min-width: 768px){
+  #testimonio p{
+    font-size: 1.7rem;
+    max-width: 65ch;
+  }
+  .cita{padding: var(--esp-lg);}
+  .cita-texto{font-size: 2rem;}
+}
+@media(min-width: 1024px){
+  #testimonio p{
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+  .cita{padding: var(--esp-lg);}
+  .cita-texto{font-size: 2.2rem;}
 }
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
 
