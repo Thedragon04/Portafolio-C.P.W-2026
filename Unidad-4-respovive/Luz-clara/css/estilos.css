@@ -1395,6 +1395,20 @@ img {
   margin-bottom: 0;
 }
 
+/*Los cinco patrones.
+Son las cinco formas en que un diseño puede reorganizarse al cambiar el ancho.
+
+1.Mostly fluid. Una rejilla que se encoge y, al llegar al minimo sus elementos bajan de linea. En pantalla grande se detiene y se centra.
+
+2.Column Drop. columnas que se apilan una debajo de la otra al angostar. Lo hace flex-warp: warap
+
+3.Layout shifter. Las zonas de posicion, no solo de tamaño. se resuelve con grid.
+
+4.Tiny tweaks. Solo ajustan tamaños y espacios, para contenido de una sola columna.
+
+5.Off Canvas. Contenido que vive fuera de la pantalla y entra al pedirlo. Por ejemplo el menu hamburgueza
+*/
+
 
 /* 16 · MOVIMIENTO           tema de la S19
 
