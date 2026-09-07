@@ -2257,6 +2257,19 @@ body{ font-size: 1.6rem;}
 
 }
 
+/*Patron column drop*/
+
+@media (min-width: 620px) and (max-width){
+  .tarjeta{
+    flex: 1 1 calc(50% - var(--esp-md));
+    /*Fuerza a dos por linea calc(). permite mezclar unidades 50% del contenedor menos el hueco*/
+  }
+  .tarjeta:last-child{
+    flex-basis: 100%;
+    /* La tercera tarjeta ocupa el ancho completo. es ina decision estetica porque se ve mejor una tarjeta ancha que agosta y sola*/
+  }
+}
+
 
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
 
