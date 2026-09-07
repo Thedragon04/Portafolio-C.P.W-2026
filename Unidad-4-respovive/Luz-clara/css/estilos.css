@@ -595,6 +595,38 @@ img {
   margin-bottom: var(--esp-md);
 }
 
+.video-envoltorio {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+
+  aspect-ratio: 16 / 9;
+  /* Mantiene la proporción sin importar el ancho de la pantalla.
+     La altura se calcula sola a partir del ancho disponible.
+     Antes de que existiera esta propiedad, conseguirlo requería un
+     truco con relleno en porcentaje que costaba explicar.            */
+
+  background-color: var(--color-tinta);
+  /* Color de respaldo mientras el video carga. Sin esto se ve un
+     hueco transparente que parece un error.                          */
+
+  border-radius: var(--radio);
+  overflow: hidden;
+  /* Recorta las esquinas del video para que sigan el redondeado del
+     envoltorio.                                                      */
+
+  box-shadow: var(--sombra-2);
+}
+
+.video-envoltorio video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Igual que con las imágenes: RECORTA en vez de DEFORMAR si la
+     proporción del archivo no coincide con la del envoltorio.        */
+  display: block;
+}
+
 
 /* 6 · SERVICIOS · FLEXBOX           tema de la S16
 
@@ -1033,6 +1065,15 @@ img {
   text-align: right;
 }
 
+/*Pequeños cambios para base de telefono*/
+#testimonio p,
+.cita-texto{
+  font-size: 1.6rem;
+  line-height: 1.6 ;
+  }
+
+
+
 
 /* 12 · TABLA           tema de la S18
 
@@ -1362,6 +1403,20 @@ img {
   opacity: 0.7;
   margin-bottom: 0;
 }
+
+/*Los cinco patrones.
+Son las cinco formas en que un diseño puede reorganizarse al cambiar el ancho.
+
+1.Mostly fluid. Una rejilla que se encoge y, al llegar al minimo sus elementos bajan de linea. En pantalla grande se detiene y se centra.
+
+2.Column Drop. columnas que se apilan una debajo de la otra al angostar. Lo hace flex-warp: warap
+
+3.Layout shifter. Las zonas de posicion, no solo de tamaño. se resuelve con grid.
+
+4.Tiny tweaks. Solo ajustan tamaños y espacios, para contenido de una sola columna.
+
+5.Off Canvas. Contenido que vive fuera de la pantalla y entra al pedirlo. Por ejemplo el menu hamburgueza
+*/
 
 
 /* 16 · MOVIMIENTO           tema de la S19
@@ -2144,6 +2199,78 @@ body{ font-size: 1.6rem;}
   .portada-titulo{font-size: 2.4rem;}
   .portada-bajada{font-size: 1.5rem;}
 }
+/*Ajustes de pantalla pequeña de video*/
+@media (max-width: 767px) {
+  .video-envoltorio {
+    border-radius: 0;
+    /* En un teléfono el video ocupa casi todo el ancho: las esquinas
+       redondeadas dejan franjas del fondo que se ven como un error
+       de encuadre.                                                   */
+  }
+}
+
+@media(min-width: 768px){
+  #testimonio p{
+    font-size: 1.7rem;
+    max-width: 65ch;
+  }
+  .cita{padding: var(--esp-lg);}
+  .cita-texto{font-size: 2rem;}
+}
+@media(min-width: 1024px){
+  #testimonio p{
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+  .cita{padding: var(--esp-lg);}
+  .cita-texto{font-size: 2.2rem;}
+}
+
+/*Mostly fluid a .mosaico en galeria.html*/
+
+/*Ajustes para telefono*/
+@media (max-width: 600px){
+  .mosaico {
+    grid-template-columns: repeat(1fr);
+    /*Una sola columna de 360px, dos columnas de 180px*/
+    grid-auto-rows: 24rem;
+  }
+  .pieza-ancha,
+  .pieza-alta,
+  .pieza-grande{
+    grid-column: auto;
+    grid-row: auto;
+    /*adaptar mosaico con piezas de distintos tamaños*/
+  }
+}
+
+/*Mostly fluid a .mosaico en galeria.html*/
+
+/*Tope para pantalla grande*/
+@media (min-width :1400px){
+  .mosaico{
+    max-width: 130rem;
+    margin-left: auto;
+    margin-right: auto;
+    /**/
+  } 
+
+}
+
+/*Patron column drop*/
+
+@media (min-width: 620px) and (max-width){
+  .tarjeta{
+    flex: 1 1 calc(50% - var(--esp-md));
+    /*Fuerza a dos por linea calc(). permite mezclar unidades 50% del contenedor menos el hueco*/
+  }
+  .tarjeta:last-child{
+    flex-basis: 100%;
+    /* La tercera tarjeta ocupa el ancho completo. es ina decision estetica porque se ve mejor una tarjeta ancha que agosta y sola*/
+  }
+}
+
+
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
 
 /* PUNTOS DE QUIEBRE
@@ -2188,6 +2315,15 @@ Quien abra esta hoja de estilos o usted mismo dentro de 6 meses sepa o tenga una
 @media (prefers-reduced-motion) preferencia de movimiento
 @media (prefers-color-scheme: dark) tema oscuro
 */
+
+@media print {
+  .video-envoltorio {
+    display: none;
+  }
+  /* Un video en papel no sirve: no se puede reproducir. Si se quiere
+     dejar constancia de que existe, se puede sustituir por su imagen
+     de portada en lugar de ocultarlo.                                */
+}
 
 @media print {
   /*quitar lo que no sirve en el papel*/
