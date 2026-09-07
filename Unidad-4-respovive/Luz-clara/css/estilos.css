@@ -2225,6 +2225,39 @@ body{ font-size: 1.6rem;}
   .cita{padding: var(--esp-lg);}
   .cita-texto{font-size: 2.2rem;}
 }
+
+/*Mostly fluid a .mosaico en galeria.html*/
+
+/*Ajustes para telefono*/
+@media (max-width: 600px){
+  .mosaico {
+    grid-template-columns: repeat(1fr);
+    /*Una sola columna de 360px, dos columnas de 180px*/
+    grid-auto-rows: 24rem;
+  }
+  .pieza-ancha,
+  .pieza-alta,
+  .pieza-grande{
+    grid-column: auto;
+    grid-row: auto;
+    /*adaptar mosaico con piezas de distintos tamaños*/
+  }
+}
+
+/*Mostly fluid a .mosaico en galeria.html*/
+
+/*Tope para pantalla grande*/
+@media (min-width :1400px){
+  .mosaico{
+    max-width: 130rem;
+    margin-left: auto;
+    margin-right: auto;
+    /**/
+  } 
+
+}
+
+
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
 
 /* PUNTOS DE QUIEBRE
