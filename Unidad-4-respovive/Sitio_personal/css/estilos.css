@@ -42,6 +42,7 @@ html {
 
 body{
     background-color: var(--fondo);
+    line-height: 1.6;
 }
 body p, a{
     font-family: var(--fuente-texto);
@@ -67,11 +68,24 @@ img{
     height: auto;
 }
 
-.contenedor{
+.contenedor-main{
     margin: 0 auto;
     max-width: var(--ancho-max);
 }
 
+.encabezado{
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+}
+
+
+.pie-pagina{
+    background-color: black;
+}
+
+.contenedor-footer{
+    display: flex;
+}
 
 /*Header con el nav*/
 
@@ -110,3 +124,22 @@ img{
     
     gap: var(--esp-md);
 }
+/*Contenedores de main*/
+.seccion-historia{
+    text-align: center;
+    margin-bottom: var(--esp-md);
+}
+
+.subtitulo-seccion{
+    margin-top: var(--esp-sm);
+    margin-bottom: var(--esp-md);
+}
+
+.texto-historia{
+    margin: 0 auto;
+    margin-bottom: var(--esp-md);
+    max-width: 65ch;
+}
+
+/*footer*/
+
