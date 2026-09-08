@@ -44,7 +44,12 @@ body{
     background-color: var(--fondo);
     line-height: 1.6;
 }
-body p, a{
+body{
+    font-family: var(--fuente-texto);
+    font-size: 1.6rem;
+    color: var(--color-texto);
+}
+a{
     font-family: var(--fuente-texto);
     font-size: 1.6rem;
     color: var(--color-texto);
@@ -68,24 +73,18 @@ img{
     height: auto;
 }
 
-.contenedor-main{
+.contenedor{
     margin: 0 auto;
     max-width: var(--ancho-max);
 }
-
-.encabezado{
-    max-width: var(--ancho-max);
-    margin: 0 auto;
-}
-
 
 .pie-pagina{
+    max-width: none;
     background-color: black;
 }
 
-.contenedor-footer{
-    display: flex;
-}
+
+
 
 /*Header con el nav*/
 

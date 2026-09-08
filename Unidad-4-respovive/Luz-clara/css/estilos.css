@@ -212,9 +212,10 @@ p {
   margin-bottom: var(--esp-sm);
 }
 
-a {
+a , li{
   color: var(--color-acento);
   text-decoration: none;
+  list-style: none;
   /* Se quita el subrayado por omisión, PERO cada tipo de enlace del
      sitio recibe después otra señal visual de que lo es. Dejar un
      enlace sin ninguna marca distintiva es un error de accesibilidad:
@@ -861,6 +862,90 @@ img {
      desde abajo.                                                      */
 }
 
+/*Panel fuera de la pantalla. patron off canvas*/
+.panel-control{
+  position: absolute;
+  opacity: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+.panel-lateral{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28rem;
+  height: 100vh;
+  background-color: var(--color-blanco);
+  box-shadow: var(--sombra-3);
+  padding: var(--esp-lg) var(--esp-md);
+  z-index: 200;
+  transform: translateX(-100%);/*aqui vive por fuera de la pantalla y se desplaza 100 de su propio ancho hacia la izquierda*/
+  overflow-y: auto;
+}
+
+/*Hacer que el panel se deslice*/
+.panel-lateral{
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+/*Abierto cuando la casilla esta marcada*/
+.panel-control:checked ~ .panel-lateral{
+  transform: translateX(0);
+  /*Vuelve a su posicion entra*/
+}
+
+/*La capa oscura de fondo*/
+/*.panel-control:checked ~ .panel-lateral::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 28rem;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: -1;/*Oscurece el resto de la pagina
+}
+/*CAPA OSCURA*/
+.panel-fondo {
+  position: fixed;
+  inset: 0;/*indica que top, bottom, left y right estan en cero*/
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.panel-control:checked ~ .panel-fondo{
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+/*El boton y el cierre*/
+.panel-boton,
+.panel-cerrar{
+  display: inline-block;
+  padding: var(--esp-xs) var(--esp-md);
+  background: var(--color-marca);
+  color: var(--color-blanco);
+  border-radius: var(--radio);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.panel-cerrar{
+  margin-top: var(--esp-md);
+  background-color: var(--color-fondo-alt);
+  color: var(--color-tinta);
+}
+
+.panel-boton:focus-within,
+.panel-cerrar:focus-within{
+  outline: 0.2rem solid var(--color-acento);
+  outline-offset: 0.2rem;
+}
 
 /* 8 · EQUIPO · CSS GRID           tema de la S17 */
 
@@ -958,6 +1043,19 @@ img {
   text-align: center;
   font-style: italic;
 }
+
+/*base . telefono. una columna. Layout Shifter*/
+#historia .dos-columnas{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:  'imagen'
+                        'texto';
+  gap: var(--esp-md);
+  /*En movil la imagen va arriba. Una foto capta la atencion y situa el contenido antes de leer*/
+}
+
+#historia .columna-imagen{grid-area: imagen;}
+#historia .columna-texto{grid-area: texto;}
 
 
 /* 10 · LISTAS Y GLOSARIO           tema de la S14 */
@@ -2269,6 +2367,48 @@ body{ font-size: 1.6rem;}
     /* La tercera tarjeta ocupa el ancho completo. es ina decision estetica porque se ve mejor una tarjeta ancha que agosta y sola*/
   }
 }
+
+/*Base. tableta . dos-columnas. layout shifter. imagen a la derecha*/
+@media (min-width: 768px){
+  #historia .dos-columnas{
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 'texto imagen';
+  }
+}
+
+/*Base. escritorio . dos-columnas. layout shifter. imagen a la izquierda*/
+@media (min-width: 1200px){
+  #historia .dos-columnas{
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 'imagen texto ';
+  }
+}
+
+/*off canvas solo para pantallas pequeñas*/
+@media (min-width: 1024px){
+  .panel-boton,
+  .panel-cerrar{
+    display: none;
+  }
+  .panel-fondo{
+    display: none;
+  }
+  .panel-lateral{
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    padding-left: 5rem;
+    z-index: auto;
+  }
+  #mosaico{
+    display: grid;
+    grid-template-columns: 24rem 1fr;
+    gap: var(--esp-lg);
+    align-items: center;
+  }
+}
+
 
 
 /*En movil no hace falta adaptar texto de los párrafos, la pantalla lo hace. La adaptación es para de tablets hacia arriba por comodidad de lectura*/
