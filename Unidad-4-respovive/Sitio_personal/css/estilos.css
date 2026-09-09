@@ -23,8 +23,10 @@ html {
 
 --color-texto: #e5e5e5;
 --fondo: #4a4a4a;
---texto-hover: #4caf50;
---texto-hover: #ff4500;
+--fondo-boton: #303030;
+--fondo-boton-hover: #0b0b0b;
+--texto-hover-1: #4caf50;
+--texto-hover-2: #ff4500;
 --color-extra: #ff5a1f;
 --color-extra-2: #ffc107;
 
@@ -37,7 +39,8 @@ html {
 
 --radio: 0.6rem
 --transicion: 0.25s ease;
---ancho-max: 120rem;    
+--ancho-max: 120rem; 
+--sombra: 0 2px 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 body{
@@ -53,6 +56,10 @@ a{
     font-family: var(--fuente-texto);
     font-size: 1.6rem;
     color: var(--color-texto);
+}
+li{
+    margin-top: var(--esp-xs);
+    margin-bottom: var(--esp-xs);
 }
 
 h1{font-size: 4rem;}
@@ -78,23 +85,71 @@ img{
     max-width: var(--ancho-max);
 }
 
-.pie-pagina{
-    max-width: none;
-    background-color: black;
+
+/*botones*/
+.boton-volver{
+    background-color: var(--fondo-boton);
+    padding: var(--esp-xs) var(--esp-sm);
+    border-radius: 0.6rem;
+    
 }
+.boton-dentro{
+    background-color: var(--fondo);
+}
+.boton-volver:hover{
+    color: var(--texto-hover-2);
+    background-color: var(--fondo-boton-hover);
+    padding: var(--esp-xs) var(--esp-sm);
+    border-radius: 0.6rem;
+    box-shadow: var(--sombra);
+}
+.volver{transition: 0.3s ease; display: inline-block;}
+.volver:hover{transform: translateY(-0.2rem);}
+
+.boton{
+    color: var(--color-texto);
+    background-color: var(--fondo-boton);
+    border-radius: 0.6rem;
+    padding: var(--esp-xs) var(--esp-xs);
+}
+.boton:hover{
+    color: var(--texto-hover-1);
+    background-color: var(--fondo-boton-hover);
+    box-shadow: var(--sombra);
+}
+.boton-caja{transition: 0.3s ease;}
+.boton-caja:hover{transform: translateY(-0.2rem);}
+.boton-caja a:hover{color: var(--texto-hover-1);} 
+
+.boton-tipos{    
+    background-color: var(--fondo-boton);
+    padding: var(--esp-xs) var(--esp-sm);
+    border-radius: 0.6rem;}
+.boton-tipos:hover{
+    color: var(--texto-hover-2);
+    background-color: var(--fondo-boton-hover);
+    padding: var(--esp-xs) var(--esp-sm);
+    border-radius: 0.6rem;
+    box-shadow: var(--sombra);
+}
+.boton-caja-tipos{transition: 0.3s ease; display: inline-block;}
+.boton-caja-tipos:hover{transform: translateY(-0.2rem);}
+/*botones*/
 
 
 
 
 /*Header con el nav*/
 
+.encabezado{
+    max-width: none;
+}
 .contenedor-encabezado{
     background-image: url(../recursos/fondo1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 10rem;
-
+    min-height: 12rem;
     display: flex;
     flex-direction: column;
     padding: var(--esp-xs) 0;
@@ -103,12 +158,12 @@ img{
 
 .lista-navegacion{
     display: flex;
-    gap: var(--esp-sm);
+    gap: var(--esp-md);
 }
 /*header*/
 
 
-/*main*/
+/*main de index*/
 .menu-de-anclas-internas{
     margin-top: var(--esp-sm);
     margin-bottom: var(--esp-xs);
@@ -139,6 +194,62 @@ img{
     margin-bottom: var(--esp-md);
     max-width: 65ch;
 }
+.lo-mas-relevante{
+    margin: 0 auto;
+    margin-bottom: var(--esp-md);
+    max-width: 65ch;
+}
+/*main de index*/
+
+/*main de listas*/
+.titulo-listas{
+    text-align: center;
+}
+.anclas-de-demonios{
+    margin-top: var(--esp-sm);
+    margin-bottom: var(--esp-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-md);
+}
+
+.grid-demonios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: var(--esp-md);
+}
+.demonios-tarjetas{
+    background-color: var(--fondo-boton);
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-md);
+    max-width: 50ch;
+    justify-content: space-between;
+    border-radius: 0.6rem;
+    padding: var(--esp-md);
+}
+
+
+/* .contenido-seccion{
+    display: flex;
+} */
+
+/*main de listas*/
+
 
 /*footer*/
+.pie-pagina{
+    max-width: none;
+    background-color: black;
+    padding-bottom: var(--esp-md);
+    padding-top: var(--esp-md);
+}
+.contenedor-footer{
 
+    max-width: var(--ancho-max);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+/*footer*/

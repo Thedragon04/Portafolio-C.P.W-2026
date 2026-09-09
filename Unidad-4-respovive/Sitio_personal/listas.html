@@ -17,7 +17,7 @@
 </head>
 
   <body>
-    <div class="contenedor">
+
 
   <!-- HEADER -->
   <header id="inicio" class="encabezado">
@@ -33,34 +33,34 @@
 
         <ul class="lista-navegacion">
 
-          <li class="item-navegacion">
+          <li class="boton-caja">
             <a
               href="index.html"
-              class="enlace-navegacion">
+              class="boton">
               Inicio
             </a>
           </li>
 
-          <li class="item-navegacion">
+          <li class="boton-caja">
             <a
               href="listas.html"
-              class="enlace-navegacion">
+              class="boton">
               Demonios de Eternal
             </a>
           </li>
 
-          <li class="item-navegacion">
+          <li class="boton-caja">
             <a
               href="contacto.html"
-              class="enlace-navegacion">
+              class="boton">
               Contacto
             </a>
           </li>
 
-          <li class="item-navegacion">
+          <li class="boton-caja">
             <a
               href="galeria.html"
-              class="enlace-navegacion">
+              class="boton">
               Galería
             </a>
           </li>
@@ -76,7 +76,7 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="contenido-principal">
-
+  <div class="contenedor">
     <!-- ENCABEZADO -->
     <div class="encabezado-listas">
 
@@ -94,26 +94,26 @@
 
         <ul class="lista-anclas">
 
-          <li class="item-ancla">
+          <li class="boton-caja">
             <a
               href="#tipos"
-              class="enlace-ancla">
+              class="boton">
               Tipos de demonios
             </a>
           </li>
 
-          <li class="item-ancla">
+          <li class="boton-caja">
             <a
               href="#puntos_debiles"
-              class="enlace-ancla">
+              class="boton">
               Algunos puntos débiles
             </a>
           </li>
 
-          <li class="item-ancla">
+          <li class="boton-caja">
             <a
               href="#armas"
-              class="enlace-ancla">
+              class="boton">
               Algunas armas y sus modos
             </a>
           </li>
@@ -126,9 +126,7 @@
 
 
     <!-- TIPOS DE DEMONIOS -->
-    <section
-      id="tipos"
-      class="demonios">
+    <section id="tipos" class="demonios">
 
       <div class="contenido-seccion">
 
@@ -142,34 +140,34 @@
             Categorías:
           </strong>
 
-          <ol start="1">
+          <ol start="1" class="anclas-de-demonios">
 
-            <li>
-              <a href="#demonios-bajo">
+            <li class="boton-caja-tipos">
+              <a href="#demonios-bajo" class="boton-tipos">
                 Demonios de nivel bajo (fodder)
               </a>
             </li>
 
-            <li>
-              <a href="#demonios-medio">
+            <li class="boton-caja-tipos">
+              <a href="#demonios-medio" class="boton-tipos">
                 Demonios de nivel medio (heavy)
               </a>
             </li>
 
-            <li>
-              <a href="#demonios-super-pesados">
+            <li class="boton-caja-tipos">
+              <a href="#demonios-super-pesados" class="boton-tipos">
                 Demonios super pesados (super heavy)
               </a>
             </li>
 
-            <li>
-              <a href="#demonios-dlc">
+            <li class="boton-caja-tipos">
+              <a href="#demonios-dlc" class="boton-tipos">
                 Demonios de DLC (Ancient Gods 1 y 2)
               </a>
             </li>
 
-            <li>
-              <a href="#demonios-jefe">
+            <li class="boton-caja-tipos">
+              <a href="#demonios-jefe" class="boton-tipos">
                 Demonios de nivel jefe (boss)
               </a>
             </li>
@@ -189,7 +187,7 @@
       <!-- DEMONIOS DE NIVEL BAJO -->
       <section
         id="demonios-bajo"
-        class="demonios">
+        class="demonios-tarjetas">
 
         <div class="contenido-seccion">
 
@@ -210,21 +208,20 @@
             <li>Tentáculo</li>
           </ul>
 
-          <div class="volver-categorias">
-            <a href="#tipos">
+        </div>
+
+          <div class="volver">
+            <a href="#tipos" class="boton-volver boton-dentro">
               Volver a categorías
             </a>
           </div>
-
-        </div>
-
       </section>
 
 
       <!-- DEMONIOS DE NIVEL MEDIO -->
       <section
         id="demonios-medio"
-        class="demonios">
+        class="demonios-tarjetas">
 
         <div class="contenido-seccion">
 
@@ -252,21 +249,20 @@
             <li>Elemental del dolor</li>
           </ul>
 
-          <div class="volver-categorias">
-            <a href="#tipos">
+        </div>
+
+          <div class="volver">
+            <a href="#tipos" class="boton-volver boton-dentro">
               Volver a categorías
             </a>
           </div>
-
-        </div>
-
       </section>
 
 
       <!-- DEMONIOS SUPER PESADOS -->
       <section
         id="demonios-super-pesados"
-        class="demonios">
+        class="demonios-tarjetas">
 
         <div class="contenido-seccion">
 
@@ -286,21 +282,20 @@
             <li>Cazador infernal</li>
           </ul>
 
-          <div class="volver-categorias">
-            <a href="#tipos">
+        </div>
+
+          <div class="volver">
+            <a href="#tipos" class="boton-volver boton-dentro">
               Volver a categorías
             </a>
           </div>
-
-        </div>
-
       </section>
 
 
       <!-- DEMONIOS DLC -->
       <section
         id="demonios-dlc"
-        class="demonios">
+        class="demonios-tarjetas">
 
         <div class="contenido-seccion">
 
@@ -324,21 +319,20 @@
             <li>Torreta</li>
           </ul>
 
-          <div class="volver-categorias">
-            <a href="#tipos">
-              Volver a categorías
-            </a>
-          </div>
-
         </div>
 
+        <div class="volver">
+            <a href="#tipos" class="boton-volver boton-dentro">
+              Volver a categorías
+            </a>
+        </div>
       </section>
 
 
       <!-- DEMONIOS JEFE -->
       <section
         id="demonios-jefe"
-        class="demonios">
+        class="demonios-tarjetas">
 
         <div class="contenido-seccion">
 
@@ -359,14 +353,13 @@
             <li>Dark lord Davoth (DLC)</li>
           </ul>
 
-          <div class="volver-categorias">
-            <a href="#tipos">
+        </div>
+
+        <div class="volver">
+            <a href="#tipos" class="boton-volver boton-dentro">
               Volver a categorías
             </a>
           </div>
-
-        </div>
-
       </section>
 
     </div>
@@ -968,7 +961,7 @@
 
     <div class="volver-inicio">
 
-      <a href="#inicio">
+      <a href="#inicio" class="boton-volver">
         Volver a inicio
       </a>
 
@@ -976,11 +969,9 @@
 
   </main>
 
-
+</div>
   <!-- FOOTER -->
-  <footer
-    id="final"
-    class="pie-pagina">
+  <footer id="final" class="contenedor pie-pagina">
 
     <div class="contenedor-footer">
 
@@ -997,8 +988,8 @@
 
   </footer>
 
-</div>
-```
+
+
 
   </body>
 
